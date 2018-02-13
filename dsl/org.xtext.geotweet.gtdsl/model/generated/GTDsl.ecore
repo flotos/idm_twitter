@@ -23,4 +23,8 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="country" upperBound="-1"
         eType="#//Country" containment="true"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Query" eSuperTypes="#//Type">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="hashtags" eType="#//HashtagList"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="countries" eType="#//CountryList"/>
+  </eClassifiers>
 </ecore:EPackage>

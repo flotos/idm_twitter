@@ -1,0 +1,5 @@
+tags presidents [ #trump:blue, #hillary:blue ]
+
+countries myCountries [ country france, country germany ]
+
+map USElection displays tags presidents in countries myCountries

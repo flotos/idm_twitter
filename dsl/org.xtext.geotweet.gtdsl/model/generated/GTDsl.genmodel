@@ -25,5 +25,9 @@
     <genClasses ecoreClass="GTDsl.ecore#//CountryList">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GTDsl.ecore#//CountryList/country"/>
     </genClasses>
+    <genClasses ecoreClass="GTDsl.ecore#//Query">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference GTDsl.ecore#//Query/hashtags"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference GTDsl.ecore#//Query/countries"/>
+    </genClasses>
   </genPackages>
 </genmodel:GenModel>

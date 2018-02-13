@@ -1,0 +1,3 @@
+tags Name [ #Name : blue, #name2 :blue ];
+countries myCountries [ country france, country germany ]
+

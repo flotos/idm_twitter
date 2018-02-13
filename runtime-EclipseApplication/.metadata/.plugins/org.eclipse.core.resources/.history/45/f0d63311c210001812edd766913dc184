@@ -1,0 +1,7 @@
+tags presidents [ #trump:blue, #hillary:green ]
+tags hockeyTeams [ #sharks:blue, #otter:red ]
+
+countries myCountries [ country USA, country Canada ]
+
+map USElection displays presidents in myCountries
+map 

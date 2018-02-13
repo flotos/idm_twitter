@@ -1,2 +1,7 @@
-tags Name [ #Name : blue, #name2 :blue ]
+tags presidents [ #trump:blue, #hillary:green ]
+tags hockeyTeams [ #sharks:blue, #otter:red ]
 
+countries northAmerica [ country USA, country Canada ]
+
+map USElection displays presidents in northAmerica
+map hockeyTrend displays hockeyTeams in northAmerica

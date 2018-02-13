@@ -1,0 +1,7 @@
+tags presidents [ #trump:blue, #hillary:green ]
+tags northAmerica [ #sharks:blue, #otter:red ]
+
+countries myCountries [ country USA, country Canada ]
+
+map USElection displays presidents in northAmerica
+map hockeyTrend displays hockeyTeams in northAmerica

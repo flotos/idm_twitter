@@ -6,7 +6,7 @@ Model:
 	 (elements+=Type)*;
 	
 Type:
-    HashtagList | CountryList;
+    HashtagList | CountryList | Query;
 
 Hashtag:
 	('#' name=ID ':' color=('red' | 'blue' | 'green' | 'yellow'));
@@ -20,4 +20,7 @@ Country:
 CountryList:
 	'countries' name=ID '[' (country+=Country ("," country+=Country)*) ']';
 	
-terminal NEWLINE: ('\r'? '\n');
+Query:
+	'map' name=ID 'displays' hashtags=[HashtagList] 'in' countries=[CountryList];
+	
+//terminal NEWLINE: ('\r'? '\n');
