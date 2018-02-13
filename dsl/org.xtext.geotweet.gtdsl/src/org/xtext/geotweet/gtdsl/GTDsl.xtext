@@ -9,10 +9,10 @@ Type:
     HashtagList | CountryList;
 
 Hashtag:
-	('#' name=ID ':' color=('red' | 'blue' | 'green'));
+	('#' name=ID ':' color=('red' | 'blue' | 'green' | 'yellow'));
 	
 HashtagList:
-	'tags' name=ID '[' (hashtag+=Hashtag (',' hashtag+=Hashtag)+) ']';
+	'tags' name=ID '[' (hashtag+=Hashtag ("," hashtag+=Hashtag)+) ']';
 
 Country:
 	'country' name=ID;

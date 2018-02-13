@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.newWizards">
+   <!--   <wizard
+            canFinishEarly="true"
+            category="org.eclipse.ui.Examples/fr.inria.ctrte.demo.category"
+            class="fr.inria.aoste.timesquare.wizard.demo.DemoWizard"
+            descriptionImage="icons/demo.gif"
+            hasPages="true"
+            icon="icons/demo.gif"
+            id="fr.inria.aoste.timesquare.wizard..wizarddemo"
+            name="Demo CCSL"
+            project="true">
+         <description>
+            Generate a example project for CCSL.
+         </description>
+      </wizard> -->
+      <wizard
+            canFinishEarly="true"
+            category="fr.inria.aoste.timesquare.utils.categories.ccsl"
+            class="fr.inria.aoste.timesquare.wizard.wizards.ProjectWizard"
+            descriptionImage="icons/demo.gif"
+            hasPages="true"
+            icon="icons/tsq.gif"
+            id="fr.inria.aoste.timesquare.wizard..wizardproject"
+            name="CCSL Project"
+            project="true">
+         <description>
+            Generate a  project for CCSL.
+         </description>
+      </wizard>
+      <wizard
+            canFinishEarly="true"
+            category="fr.inria.aoste.timesquare.utils.categories.ccsl"
+            class="fr.inria.aoste.timesquare.wizard.wizards.ExtendedCCSLNewWizard"
+            icon="icons/tsq.gif"
+            id="fr.inria.aoste.timesquare.wizard.wizards.ExtendedCCSLNewWizard"
+            name="extendedCCSL File">
+         <description>
+            description body text
+         </description>
+      </wizard>
+      <wizard
+            canFinishEarly="true"
+            category="fr.inria.aoste.timesquare.utils.categories.ccsl"
+            class="fr.inria.aoste.timesquare.wizard.wizards.CCSLLibNewWizard"
+            icon="icons/tsq.gif"
+            id="fr.inria.aoste.timesquare.wizard.wizards.ExtendedCCSLNewWizard"
+            name="CCSL Library File">
+         <description>
+            description body text
+         </description>
+      </wizard>
+      <wizard
+            canFinishEarly="true"
+            category="fr.inria.aoste.timesquare.utils.categories.ccsl"
+            class="fr.inria.aoste.timesquare.wizard.wizards.CCSLPriorityNewWizard"
+            icon="icons/tsq.gif"
+            id="fr.inria.aoste.timesquare.wizard.wizards.CCSLPriorityNewWizard"
+            name="CCSL Priority File">
+         <description>
+            description body text
+         </description>
+      </wizard>
+   </extension>
+   <extension
+         point="org.eclipse.ui.intro.configExtension">
+      <configExtension
+            configId="org.eclipse.ui.intro.universalConfig"
+            content="CCSL/tsq.xml">
+      </configExtension>
+      <action
+         name="DemoCustomAction"
+         replaces="http://org.eclipse.ui.intro/runAction?pluginId=fr.inria.aoste.timesquare.wizard&amp;class=fr.inria.aoste.timesquare.wizard.action.DemoAction&amp;param1=value1"/>
+      <configExtension
+            configId="org.eclipse.ui.intro.universalConfig"
+            content="CCSL/sample.xml">
+      </configExtension>
+      
+   </extension>
+
+</plugin>

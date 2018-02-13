@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<introContent>
+  	<extensionContent id="frinriaaostetimesquarewizard-introExtension" style="css/sample.css" name="TimeSquare" path="whatsnew/@">
+		<group style-id="content-group" id="frinriaaostetimesquarewizard-introLink-group">
+       		<link label="TimeSquare" url="http://timesquare.inria.fr" id="frinriaaostetimesquarewizard-introLink" style-id="content-link">
+          		<text>TimeSquare MDK</text>
+       		</link>
+       	</group>
+  	</extensionContent>
+</introContent>
