@@ -12,7 +12,7 @@ Hashtag:
 	('#' name=ID ':' color=('red' | 'blue' | 'green'));
 	
 HashtagList:
-	'tags' name=ID '[' (hashtag+=Hashtag (',' hashtag+=Hashtag)+) ']';
+	'tags' name=ID '[' (hashtag+=Hashtag ("," hashtag+=Hashtag)+) ']';
 
 Country:
 	'country' name=ID;

@@ -1,0 +1,21 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: fr.inria.aoste.timesquare.wizard;singleton:=true
+Archiver-Version: Plexus Archiver
+Built-By: jdeanton
+Require-Bundle: org.eclipse.core.runtime,org.eclipse.core.resources,or
+ g.eclipse.ui,org.eclipse.ui.ide,org.eclipse.ui.intro,org.eclipse.ui.f
+ orms,fr.inria.aoste.timesquare.utils.console;bundle-version="1.0.0",f
+ r.inria.aoste.timesquare.utils.pluginhelpers;bundle-version="1.0.0"
+Bundle-ManifestVersion: 2
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-ActivationPolicy: lazy 
+Bundle-Vendor: Aoste INRIA/I3S
+Export-Package: fr.inria.aoste.timesquare.wizard,fr.inria.aoste.timesq
+ uare.wizard.action,fr.inria.aoste.timesquare.wizard.content,fr.inria.
+ aoste.timesquare.wizard.wizards
+Bundle-Name: Demo Plug-in
+Bundle-Version: 1.0.0.201702171638
+Bundle-Activator: fr.inria.aoste.timesquare.wizard.Activator
+Created-By: Apache Maven 3.3.9
+Build-Jdk: 1.8.0_121
+

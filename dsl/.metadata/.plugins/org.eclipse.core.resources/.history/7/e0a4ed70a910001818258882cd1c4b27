@@ -1,0 +1,23 @@
+grammar org.xtext.geotweet.gtdsl.GTDsl with org.eclipse.xtext.common.Terminals
+
+generate gTDsl "http://www.xtext.org/geotweet/gtdsl/GTDsl"
+
+Model:
+	 (elements+=Type)*;
+	
+Type:
+    HashtagList | CountryList;
+
+Hashtag:
+	('#' name=ID ':' color=('red' | 'blue' | 'green'));
+	
+HashtagList:
+	'tags' name=ID '[' (hashtag+=Hashtag (',' hashtag+=Hashtag)+) ']';
+
+Country:
+	'country' name=ID;
+	
+CountryList:
+	'countries' name=ID '[' (country+=Country ("," country+=Country)*) ']';
+	
+terminal NEWLINE: ('\r'? '\n');

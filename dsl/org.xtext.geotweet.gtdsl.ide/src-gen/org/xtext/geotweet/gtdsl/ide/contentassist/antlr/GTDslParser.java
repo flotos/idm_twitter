@@ -36,21 +36,21 @@ public class GTDslParser extends AbstractContentAssistParser {
 				private static final long serialVersionUID = 1L;
 				{
 					put(grammarAccess.getTypeAccess().getAlternatives(), "rule__Type__Alternatives");
-					put(grammarAccess.getHashtagAccess().getColorAlternatives_0_3_0(), "rule__Hashtag__ColorAlternatives_0_3_0");
+					put(grammarAccess.getHashtagAccess().getColorAlternatives_3_0(), "rule__Hashtag__ColorAlternatives_3_0");
 					put(grammarAccess.getHashtagAccess().getGroup(), "rule__Hashtag__Group__0");
-					put(grammarAccess.getHashtagAccess().getGroup_0(), "rule__Hashtag__Group_0__0");
 					put(grammarAccess.getHashtagListAccess().getGroup(), "rule__HashtagList__Group__0");
 					put(grammarAccess.getHashtagListAccess().getGroup_3(), "rule__HashtagList__Group_3__0");
+					put(grammarAccess.getHashtagListAccess().getGroup_3_1(), "rule__HashtagList__Group_3_1__0");
 					put(grammarAccess.getCountryAccess().getGroup(), "rule__Country__Group__0");
 					put(grammarAccess.getCountryListAccess().getGroup(), "rule__CountryList__Group__0");
 					put(grammarAccess.getCountryListAccess().getGroup_3(), "rule__CountryList__Group_3__0");
 					put(grammarAccess.getCountryListAccess().getGroup_3_1(), "rule__CountryList__Group_3_1__0");
 					put(grammarAccess.getModelAccess().getElementsAssignment(), "rule__Model__ElementsAssignment");
-					put(grammarAccess.getHashtagAccess().getNameAssignment_0_1(), "rule__Hashtag__NameAssignment_0_1");
-					put(grammarAccess.getHashtagAccess().getColorAssignment_0_3(), "rule__Hashtag__ColorAssignment_0_3");
+					put(grammarAccess.getHashtagAccess().getNameAssignment_1(), "rule__Hashtag__NameAssignment_1");
+					put(grammarAccess.getHashtagAccess().getColorAssignment_3(), "rule__Hashtag__ColorAssignment_3");
 					put(grammarAccess.getHashtagListAccess().getNameAssignment_1(), "rule__HashtagList__NameAssignment_1");
 					put(grammarAccess.getHashtagListAccess().getHashtagAssignment_3_0(), "rule__HashtagList__HashtagAssignment_3_0");
-					put(grammarAccess.getHashtagListAccess().getHashtagAssignment_3_1(), "rule__HashtagList__HashtagAssignment_3_1");
+					put(grammarAccess.getHashtagListAccess().getHashtagAssignment_3_1_1(), "rule__HashtagList__HashtagAssignment_3_1_1");
 					put(grammarAccess.getCountryAccess().getNameAssignment_1(), "rule__Country__NameAssignment_1");
 					put(grammarAccess.getCountryListAccess().getNameAssignment_1(), "rule__CountryList__NameAssignment_1");
 					put(grammarAccess.getCountryListAccess().getCountryAssignment_3_0(), "rule__CountryList__CountryAssignment_3_0");

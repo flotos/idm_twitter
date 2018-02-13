@@ -22,9 +22,9 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalGTDslParser extends AbstractInternalContentAssistParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_NEWLINE", "RULE_ID", "RULE_INT", "RULE_STRING", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'red'", "'blue'", "'green'", "'#'", "':'", "'tags'", "'['", "']'", "'country'", "'countries'", "','"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_NEWLINE", "RULE_INT", "RULE_STRING", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'red'", "'blue'", "'green'", "'#'", "':'", "'tags'", "'['", "']'", "','", "'country'", "'countries'"
     };
-    public static final int RULE_NEWLINE=4;
+    public static final int RULE_NEWLINE=5;
     public static final int RULE_STRING=7;
     public static final int RULE_SL_COMMENT=9;
     public static final int T__19=19;
@@ -36,7 +36,7 @@ public class InternalGTDslParser extends AbstractInternalContentAssistParser {
     public static final int T__13=13;
     public static final int T__14=14;
     public static final int EOF=-1;
-    public static final int RULE_ID=5;
+    public static final int RULE_ID=4;
     public static final int RULE_WS=10;
     public static final int RULE_ANY_OTHER=11;
     public static final int RULE_INT=6;
@@ -130,7 +130,7 @@ public class InternalGTDslParser extends AbstractInternalContentAssistParser {
                 int alt1=2;
                 int LA1_0 = input.LA(1);
 
-                if ( (LA1_0==17||LA1_0==21) ) {
+                if ( (LA1_0==17||LA1_0==22) ) {
                     alt1=1;
                 }
 
@@ -574,7 +574,7 @@ public class InternalGTDslParser extends AbstractInternalContentAssistParser {
             if ( (LA2_0==17) ) {
                 alt2=1;
             }
-            else if ( (LA2_0==21) ) {
+            else if ( (LA2_0==22) ) {
                 alt2=2;
             }
             else {
@@ -639,9 +639,9 @@ public class InternalGTDslParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__Type__Alternatives"
 
 
-    // $ANTLR start "rule__Hashtag__ColorAlternatives_0_3_0"
-    // InternalGTDsl.g:223:1: rule__Hashtag__ColorAlternatives_0_3_0 : ( ( 'red' ) | ( 'blue' ) | ( 'green' ) );
-    public final void rule__Hashtag__ColorAlternatives_0_3_0() throws RecognitionException {
+    // $ANTLR start "rule__Hashtag__ColorAlternatives_3_0"
+    // InternalGTDsl.g:223:1: rule__Hashtag__ColorAlternatives_3_0 : ( ( 'red' ) | ( 'blue' ) | ( 'green' ) );
+    public final void rule__Hashtag__ColorAlternatives_3_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -678,9 +678,9 @@ public class InternalGTDslParser extends AbstractInternalContentAssistParser {
                     // InternalGTDsl.g:228:2: ( 'red' )
                     // InternalGTDsl.g:229:3: 'red'
                     {
-                     before(grammarAccess.getHashtagAccess().getColorRedKeyword_0_3_0_0()); 
+                     before(grammarAccess.getHashtagAccess().getColorRedKeyword_3_0_0()); 
                     match(input,12,FOLLOW_2); 
-                     after(grammarAccess.getHashtagAccess().getColorRedKeyword_0_3_0_0()); 
+                     after(grammarAccess.getHashtagAccess().getColorRedKeyword_3_0_0()); 
 
                     }
 
@@ -693,9 +693,9 @@ public class InternalGTDslParser extends AbstractInternalContentAssistParser {
                     // InternalGTDsl.g:234:2: ( 'blue' )
                     // InternalGTDsl.g:235:3: 'blue'
                     {
-                     before(grammarAccess.getHashtagAccess().getColorBlueKeyword_0_3_0_1()); 
+                     before(grammarAccess.getHashtagAccess().getColorBlueKeyword_3_0_1()); 
                     match(input,13,FOLLOW_2); 
-                     after(grammarAccess.getHashtagAccess().getColorBlueKeyword_0_3_0_1()); 
+                     after(grammarAccess.getHashtagAccess().getColorBlueKeyword_3_0_1()); 
 
                     }
 
@@ -708,9 +708,9 @@ public class InternalGTDslParser extends AbstractInternalContentAssistParser {
                     // InternalGTDsl.g:240:2: ( 'green' )
                     // InternalGTDsl.g:241:3: 'green'
                     {
-                     before(grammarAccess.getHashtagAccess().getColorGreenKeyword_0_3_0_2()); 
+                     before(grammarAccess.getHashtagAccess().getColorGreenKeyword_3_0_2()); 
                     match(input,14,FOLLOW_2); 
-                     after(grammarAccess.getHashtagAccess().getColorGreenKeyword_0_3_0_2()); 
+                     after(grammarAccess.getHashtagAccess().getColorGreenKeyword_3_0_2()); 
 
                     }
 
@@ -731,7 +731,7 @@ public class InternalGTDslParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Hashtag__ColorAlternatives_0_3_0"
+    // $ANTLR end "rule__Hashtag__ColorAlternatives_3_0"
 
 
     // $ANTLR start "rule__Hashtag__Group__0"
@@ -773,31 +773,21 @@ public class InternalGTDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Hashtag__Group__0__Impl"
-    // InternalGTDsl.g:262:1: rule__Hashtag__Group__0__Impl : ( ( rule__Hashtag__Group_0__0 ) ) ;
+    // InternalGTDsl.g:262:1: rule__Hashtag__Group__0__Impl : ( '#' ) ;
     public final void rule__Hashtag__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGTDsl.g:266:1: ( ( ( rule__Hashtag__Group_0__0 ) ) )
-            // InternalGTDsl.g:267:1: ( ( rule__Hashtag__Group_0__0 ) )
+            // InternalGTDsl.g:266:1: ( ( '#' ) )
+            // InternalGTDsl.g:267:1: ( '#' )
             {
-            // InternalGTDsl.g:267:1: ( ( rule__Hashtag__Group_0__0 ) )
-            // InternalGTDsl.g:268:2: ( rule__Hashtag__Group_0__0 )
+            // InternalGTDsl.g:267:1: ( '#' )
+            // InternalGTDsl.g:268:2: '#'
             {
-             before(grammarAccess.getHashtagAccess().getGroup_0()); 
-            // InternalGTDsl.g:269:2: ( rule__Hashtag__Group_0__0 )
-            // InternalGTDsl.g:269:3: rule__Hashtag__Group_0__0
-            {
-            pushFollow(FOLLOW_2);
-            rule__Hashtag__Group_0__0();
-
-            state._fsp--;
-
-
-            }
-
-             after(grammarAccess.getHashtagAccess().getGroup_0()); 
+             before(grammarAccess.getHashtagAccess().getNumberSignKeyword_0()); 
+            match(input,15,FOLLOW_2); 
+             after(grammarAccess.getHashtagAccess().getNumberSignKeyword_0()); 
 
             }
 
@@ -820,17 +810,22 @@ public class InternalGTDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Hashtag__Group__1"
-    // InternalGTDsl.g:277:1: rule__Hashtag__Group__1 : rule__Hashtag__Group__1__Impl ;
+    // InternalGTDsl.g:277:1: rule__Hashtag__Group__1 : rule__Hashtag__Group__1__Impl rule__Hashtag__Group__2 ;
     public final void rule__Hashtag__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGTDsl.g:281:1: ( rule__Hashtag__Group__1__Impl )
-            // InternalGTDsl.g:282:2: rule__Hashtag__Group__1__Impl
+            // InternalGTDsl.g:281:1: ( rule__Hashtag__Group__1__Impl rule__Hashtag__Group__2 )
+            // InternalGTDsl.g:282:2: rule__Hashtag__Group__1__Impl rule__Hashtag__Group__2
             {
-            pushFollow(FOLLOW_2);
+            pushFollow(FOLLOW_5);
             rule__Hashtag__Group__1__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_2);
+            rule__Hashtag__Group__2();
 
             state._fsp--;
 
@@ -853,66 +848,31 @@ public class InternalGTDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Hashtag__Group__1__Impl"
-    // InternalGTDsl.g:288:1: rule__Hashtag__Group__1__Impl : ( ( ( RULE_NEWLINE ) ) ( ( RULE_NEWLINE )* ) ) ;
+    // InternalGTDsl.g:289:1: rule__Hashtag__Group__1__Impl : ( ( rule__Hashtag__NameAssignment_1 ) ) ;
     public final void rule__Hashtag__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGTDsl.g:292:1: ( ( ( ( RULE_NEWLINE ) ) ( ( RULE_NEWLINE )* ) ) )
-            // InternalGTDsl.g:293:1: ( ( ( RULE_NEWLINE ) ) ( ( RULE_NEWLINE )* ) )
+            // InternalGTDsl.g:293:1: ( ( ( rule__Hashtag__NameAssignment_1 ) ) )
+            // InternalGTDsl.g:294:1: ( ( rule__Hashtag__NameAssignment_1 ) )
             {
-            // InternalGTDsl.g:293:1: ( ( ( RULE_NEWLINE ) ) ( ( RULE_NEWLINE )* ) )
-            // InternalGTDsl.g:294:2: ( ( RULE_NEWLINE ) ) ( ( RULE_NEWLINE )* )
+            // InternalGTDsl.g:294:1: ( ( rule__Hashtag__NameAssignment_1 ) )
+            // InternalGTDsl.g:295:2: ( rule__Hashtag__NameAssignment_1 )
             {
-            // InternalGTDsl.g:294:2: ( ( RULE_NEWLINE ) )
-            // InternalGTDsl.g:295:3: ( RULE_NEWLINE )
+             before(grammarAccess.getHashtagAccess().getNameAssignment_1()); 
+            // InternalGTDsl.g:296:2: ( rule__Hashtag__NameAssignment_1 )
+            // InternalGTDsl.g:296:3: rule__Hashtag__NameAssignment_1
             {
-             before(grammarAccess.getHashtagAccess().getNEWLINETerminalRuleCall_1()); 
-            // InternalGTDsl.g:296:3: ( RULE_NEWLINE )
-            // InternalGTDsl.g:296:4: RULE_NEWLINE
-            {
-            match(input,RULE_NEWLINE,FOLLOW_5); 
+            pushFollow(FOLLOW_2);
+            rule__Hashtag__NameAssignment_1();
+
+            state._fsp--;
+
 
             }
 
-             after(grammarAccess.getHashtagAccess().getNEWLINETerminalRuleCall_1()); 
-
-            }
-
-            // InternalGTDsl.g:299:2: ( ( RULE_NEWLINE )* )
-            // InternalGTDsl.g:300:3: ( RULE_NEWLINE )*
-            {
-             before(grammarAccess.getHashtagAccess().getNEWLINETerminalRuleCall_1()); 
-            // InternalGTDsl.g:301:3: ( RULE_NEWLINE )*
-            loop4:
-            do {
-                int alt4=2;
-                int LA4_0 = input.LA(1);
-
-                if ( (LA4_0==RULE_NEWLINE) ) {
-                    alt4=1;
-                }
-
-
-                switch (alt4) {
-            	case 1 :
-            	    // InternalGTDsl.g:301:4: RULE_NEWLINE
-            	    {
-            	    match(input,RULE_NEWLINE,FOLLOW_5); 
-
-            	    }
-            	    break;
-
-            	default :
-            	    break loop4;
-                }
-            } while (true);
-
-             after(grammarAccess.getHashtagAccess().getNEWLINETerminalRuleCall_1()); 
-
-            }
-
+             after(grammarAccess.getHashtagAccess().getNameAssignment_1()); 
 
             }
 
@@ -934,23 +894,23 @@ public class InternalGTDslParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__Hashtag__Group__1__Impl"
 
 
-    // $ANTLR start "rule__Hashtag__Group_0__0"
-    // InternalGTDsl.g:311:1: rule__Hashtag__Group_0__0 : rule__Hashtag__Group_0__0__Impl rule__Hashtag__Group_0__1 ;
-    public final void rule__Hashtag__Group_0__0() throws RecognitionException {
+    // $ANTLR start "rule__Hashtag__Group__2"
+    // InternalGTDsl.g:304:1: rule__Hashtag__Group__2 : rule__Hashtag__Group__2__Impl rule__Hashtag__Group__3 ;
+    public final void rule__Hashtag__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGTDsl.g:315:1: ( rule__Hashtag__Group_0__0__Impl rule__Hashtag__Group_0__1 )
-            // InternalGTDsl.g:316:2: rule__Hashtag__Group_0__0__Impl rule__Hashtag__Group_0__1
+            // InternalGTDsl.g:308:1: ( rule__Hashtag__Group__2__Impl rule__Hashtag__Group__3 )
+            // InternalGTDsl.g:309:2: rule__Hashtag__Group__2__Impl rule__Hashtag__Group__3
             {
             pushFollow(FOLLOW_6);
-            rule__Hashtag__Group_0__0__Impl();
+            rule__Hashtag__Group__2__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__Hashtag__Group_0__1();
+            rule__Hashtag__Group__3();
 
             state._fsp--;
 
@@ -969,185 +929,25 @@ public class InternalGTDslParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Hashtag__Group_0__0"
+    // $ANTLR end "rule__Hashtag__Group__2"
 
 
-    // $ANTLR start "rule__Hashtag__Group_0__0__Impl"
-    // InternalGTDsl.g:323:1: rule__Hashtag__Group_0__0__Impl : ( '#' ) ;
-    public final void rule__Hashtag__Group_0__0__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalGTDsl.g:327:1: ( ( '#' ) )
-            // InternalGTDsl.g:328:1: ( '#' )
-            {
-            // InternalGTDsl.g:328:1: ( '#' )
-            // InternalGTDsl.g:329:2: '#'
-            {
-             before(grammarAccess.getHashtagAccess().getNumberSignKeyword_0_0()); 
-            match(input,15,FOLLOW_2); 
-             after(grammarAccess.getHashtagAccess().getNumberSignKeyword_0_0()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Hashtag__Group_0__0__Impl"
-
-
-    // $ANTLR start "rule__Hashtag__Group_0__1"
-    // InternalGTDsl.g:338:1: rule__Hashtag__Group_0__1 : rule__Hashtag__Group_0__1__Impl rule__Hashtag__Group_0__2 ;
-    public final void rule__Hashtag__Group_0__1() throws RecognitionException {
+    // $ANTLR start "rule__Hashtag__Group__2__Impl"
+    // InternalGTDsl.g:316:1: rule__Hashtag__Group__2__Impl : ( ':' ) ;
+    public final void rule__Hashtag__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGTDsl.g:342:1: ( rule__Hashtag__Group_0__1__Impl rule__Hashtag__Group_0__2 )
-            // InternalGTDsl.g:343:2: rule__Hashtag__Group_0__1__Impl rule__Hashtag__Group_0__2
+            // InternalGTDsl.g:320:1: ( ( ':' ) )
+            // InternalGTDsl.g:321:1: ( ':' )
             {
-            pushFollow(FOLLOW_7);
-            rule__Hashtag__Group_0__1__Impl();
-
-            state._fsp--;
-
-            pushFollow(FOLLOW_2);
-            rule__Hashtag__Group_0__2();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Hashtag__Group_0__1"
-
-
-    // $ANTLR start "rule__Hashtag__Group_0__1__Impl"
-    // InternalGTDsl.g:350:1: rule__Hashtag__Group_0__1__Impl : ( ( rule__Hashtag__NameAssignment_0_1 ) ) ;
-    public final void rule__Hashtag__Group_0__1__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalGTDsl.g:354:1: ( ( ( rule__Hashtag__NameAssignment_0_1 ) ) )
-            // InternalGTDsl.g:355:1: ( ( rule__Hashtag__NameAssignment_0_1 ) )
+            // InternalGTDsl.g:321:1: ( ':' )
+            // InternalGTDsl.g:322:2: ':'
             {
-            // InternalGTDsl.g:355:1: ( ( rule__Hashtag__NameAssignment_0_1 ) )
-            // InternalGTDsl.g:356:2: ( rule__Hashtag__NameAssignment_0_1 )
-            {
-             before(grammarAccess.getHashtagAccess().getNameAssignment_0_1()); 
-            // InternalGTDsl.g:357:2: ( rule__Hashtag__NameAssignment_0_1 )
-            // InternalGTDsl.g:357:3: rule__Hashtag__NameAssignment_0_1
-            {
-            pushFollow(FOLLOW_2);
-            rule__Hashtag__NameAssignment_0_1();
-
-            state._fsp--;
-
-
-            }
-
-             after(grammarAccess.getHashtagAccess().getNameAssignment_0_1()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Hashtag__Group_0__1__Impl"
-
-
-    // $ANTLR start "rule__Hashtag__Group_0__2"
-    // InternalGTDsl.g:365:1: rule__Hashtag__Group_0__2 : rule__Hashtag__Group_0__2__Impl rule__Hashtag__Group_0__3 ;
-    public final void rule__Hashtag__Group_0__2() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalGTDsl.g:369:1: ( rule__Hashtag__Group_0__2__Impl rule__Hashtag__Group_0__3 )
-            // InternalGTDsl.g:370:2: rule__Hashtag__Group_0__2__Impl rule__Hashtag__Group_0__3
-            {
-            pushFollow(FOLLOW_8);
-            rule__Hashtag__Group_0__2__Impl();
-
-            state._fsp--;
-
-            pushFollow(FOLLOW_2);
-            rule__Hashtag__Group_0__3();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Hashtag__Group_0__2"
-
-
-    // $ANTLR start "rule__Hashtag__Group_0__2__Impl"
-    // InternalGTDsl.g:377:1: rule__Hashtag__Group_0__2__Impl : ( ':' ) ;
-    public final void rule__Hashtag__Group_0__2__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalGTDsl.g:381:1: ( ( ':' ) )
-            // InternalGTDsl.g:382:1: ( ':' )
-            {
-            // InternalGTDsl.g:382:1: ( ':' )
-            // InternalGTDsl.g:383:2: ':'
-            {
-             before(grammarAccess.getHashtagAccess().getColonKeyword_0_2()); 
+             before(grammarAccess.getHashtagAccess().getColonKeyword_2()); 
             match(input,16,FOLLOW_2); 
-             after(grammarAccess.getHashtagAccess().getColonKeyword_0_2()); 
+             after(grammarAccess.getHashtagAccess().getColonKeyword_2()); 
 
             }
 
@@ -1166,21 +966,21 @@ public class InternalGTDslParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Hashtag__Group_0__2__Impl"
+    // $ANTLR end "rule__Hashtag__Group__2__Impl"
 
 
-    // $ANTLR start "rule__Hashtag__Group_0__3"
-    // InternalGTDsl.g:392:1: rule__Hashtag__Group_0__3 : rule__Hashtag__Group_0__3__Impl ;
-    public final void rule__Hashtag__Group_0__3() throws RecognitionException {
+    // $ANTLR start "rule__Hashtag__Group__3"
+    // InternalGTDsl.g:331:1: rule__Hashtag__Group__3 : rule__Hashtag__Group__3__Impl ;
+    public final void rule__Hashtag__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGTDsl.g:396:1: ( rule__Hashtag__Group_0__3__Impl )
-            // InternalGTDsl.g:397:2: rule__Hashtag__Group_0__3__Impl
+            // InternalGTDsl.g:335:1: ( rule__Hashtag__Group__3__Impl )
+            // InternalGTDsl.g:336:2: rule__Hashtag__Group__3__Impl
             {
             pushFollow(FOLLOW_2);
-            rule__Hashtag__Group_0__3__Impl();
+            rule__Hashtag__Group__3__Impl();
 
             state._fsp--;
 
@@ -1199,35 +999,35 @@ public class InternalGTDslParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Hashtag__Group_0__3"
+    // $ANTLR end "rule__Hashtag__Group__3"
 
 
-    // $ANTLR start "rule__Hashtag__Group_0__3__Impl"
-    // InternalGTDsl.g:403:1: rule__Hashtag__Group_0__3__Impl : ( ( rule__Hashtag__ColorAssignment_0_3 ) ) ;
-    public final void rule__Hashtag__Group_0__3__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Hashtag__Group__3__Impl"
+    // InternalGTDsl.g:342:1: rule__Hashtag__Group__3__Impl : ( ( rule__Hashtag__ColorAssignment_3 ) ) ;
+    public final void rule__Hashtag__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGTDsl.g:407:1: ( ( ( rule__Hashtag__ColorAssignment_0_3 ) ) )
-            // InternalGTDsl.g:408:1: ( ( rule__Hashtag__ColorAssignment_0_3 ) )
+            // InternalGTDsl.g:346:1: ( ( ( rule__Hashtag__ColorAssignment_3 ) ) )
+            // InternalGTDsl.g:347:1: ( ( rule__Hashtag__ColorAssignment_3 ) )
             {
-            // InternalGTDsl.g:408:1: ( ( rule__Hashtag__ColorAssignment_0_3 ) )
-            // InternalGTDsl.g:409:2: ( rule__Hashtag__ColorAssignment_0_3 )
+            // InternalGTDsl.g:347:1: ( ( rule__Hashtag__ColorAssignment_3 ) )
+            // InternalGTDsl.g:348:2: ( rule__Hashtag__ColorAssignment_3 )
             {
-             before(grammarAccess.getHashtagAccess().getColorAssignment_0_3()); 
-            // InternalGTDsl.g:410:2: ( rule__Hashtag__ColorAssignment_0_3 )
-            // InternalGTDsl.g:410:3: rule__Hashtag__ColorAssignment_0_3
+             before(grammarAccess.getHashtagAccess().getColorAssignment_3()); 
+            // InternalGTDsl.g:349:2: ( rule__Hashtag__ColorAssignment_3 )
+            // InternalGTDsl.g:349:3: rule__Hashtag__ColorAssignment_3
             {
             pushFollow(FOLLOW_2);
-            rule__Hashtag__ColorAssignment_0_3();
+            rule__Hashtag__ColorAssignment_3();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getHashtagAccess().getColorAssignment_0_3()); 
+             after(grammarAccess.getHashtagAccess().getColorAssignment_3()); 
 
             }
 
@@ -1246,20 +1046,20 @@ public class InternalGTDslParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Hashtag__Group_0__3__Impl"
+    // $ANTLR end "rule__Hashtag__Group__3__Impl"
 
 
     // $ANTLR start "rule__HashtagList__Group__0"
-    // InternalGTDsl.g:419:1: rule__HashtagList__Group__0 : rule__HashtagList__Group__0__Impl rule__HashtagList__Group__1 ;
+    // InternalGTDsl.g:358:1: rule__HashtagList__Group__0 : rule__HashtagList__Group__0__Impl rule__HashtagList__Group__1 ;
     public final void rule__HashtagList__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGTDsl.g:423:1: ( rule__HashtagList__Group__0__Impl rule__HashtagList__Group__1 )
-            // InternalGTDsl.g:424:2: rule__HashtagList__Group__0__Impl rule__HashtagList__Group__1
+            // InternalGTDsl.g:362:1: ( rule__HashtagList__Group__0__Impl rule__HashtagList__Group__1 )
+            // InternalGTDsl.g:363:2: rule__HashtagList__Group__0__Impl rule__HashtagList__Group__1
             {
-            pushFollow(FOLLOW_6);
+            pushFollow(FOLLOW_4);
             rule__HashtagList__Group__0__Impl();
 
             state._fsp--;
@@ -1288,17 +1088,17 @@ public class InternalGTDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__HashtagList__Group__0__Impl"
-    // InternalGTDsl.g:431:1: rule__HashtagList__Group__0__Impl : ( 'tags' ) ;
+    // InternalGTDsl.g:370:1: rule__HashtagList__Group__0__Impl : ( 'tags' ) ;
     public final void rule__HashtagList__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGTDsl.g:435:1: ( ( 'tags' ) )
-            // InternalGTDsl.g:436:1: ( 'tags' )
+            // InternalGTDsl.g:374:1: ( ( 'tags' ) )
+            // InternalGTDsl.g:375:1: ( 'tags' )
             {
-            // InternalGTDsl.g:436:1: ( 'tags' )
-            // InternalGTDsl.g:437:2: 'tags'
+            // InternalGTDsl.g:375:1: ( 'tags' )
+            // InternalGTDsl.g:376:2: 'tags'
             {
              before(grammarAccess.getHashtagListAccess().getTagsKeyword_0()); 
             match(input,17,FOLLOW_2); 
@@ -1325,16 +1125,16 @@ public class InternalGTDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__HashtagList__Group__1"
-    // InternalGTDsl.g:446:1: rule__HashtagList__Group__1 : rule__HashtagList__Group__1__Impl rule__HashtagList__Group__2 ;
+    // InternalGTDsl.g:385:1: rule__HashtagList__Group__1 : rule__HashtagList__Group__1__Impl rule__HashtagList__Group__2 ;
     public final void rule__HashtagList__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGTDsl.g:450:1: ( rule__HashtagList__Group__1__Impl rule__HashtagList__Group__2 )
-            // InternalGTDsl.g:451:2: rule__HashtagList__Group__1__Impl rule__HashtagList__Group__2
+            // InternalGTDsl.g:389:1: ( rule__HashtagList__Group__1__Impl rule__HashtagList__Group__2 )
+            // InternalGTDsl.g:390:2: rule__HashtagList__Group__1__Impl rule__HashtagList__Group__2
             {
-            pushFollow(FOLLOW_9);
+            pushFollow(FOLLOW_7);
             rule__HashtagList__Group__1__Impl();
 
             state._fsp--;
@@ -1363,21 +1163,21 @@ public class InternalGTDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__HashtagList__Group__1__Impl"
-    // InternalGTDsl.g:458:1: rule__HashtagList__Group__1__Impl : ( ( rule__HashtagList__NameAssignment_1 ) ) ;
+    // InternalGTDsl.g:397:1: rule__HashtagList__Group__1__Impl : ( ( rule__HashtagList__NameAssignment_1 ) ) ;
     public final void rule__HashtagList__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGTDsl.g:462:1: ( ( ( rule__HashtagList__NameAssignment_1 ) ) )
-            // InternalGTDsl.g:463:1: ( ( rule__HashtagList__NameAssignment_1 ) )
+            // InternalGTDsl.g:401:1: ( ( ( rule__HashtagList__NameAssignment_1 ) ) )
+            // InternalGTDsl.g:402:1: ( ( rule__HashtagList__NameAssignment_1 ) )
             {
-            // InternalGTDsl.g:463:1: ( ( rule__HashtagList__NameAssignment_1 ) )
-            // InternalGTDsl.g:464:2: ( rule__HashtagList__NameAssignment_1 )
+            // InternalGTDsl.g:402:1: ( ( rule__HashtagList__NameAssignment_1 ) )
+            // InternalGTDsl.g:403:2: ( rule__HashtagList__NameAssignment_1 )
             {
              before(grammarAccess.getHashtagListAccess().getNameAssignment_1()); 
-            // InternalGTDsl.g:465:2: ( rule__HashtagList__NameAssignment_1 )
-            // InternalGTDsl.g:465:3: rule__HashtagList__NameAssignment_1
+            // InternalGTDsl.g:404:2: ( rule__HashtagList__NameAssignment_1 )
+            // InternalGTDsl.g:404:3: rule__HashtagList__NameAssignment_1
             {
             pushFollow(FOLLOW_2);
             rule__HashtagList__NameAssignment_1();
@@ -1410,16 +1210,16 @@ public class InternalGTDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__HashtagList__Group__2"
-    // InternalGTDsl.g:473:1: rule__HashtagList__Group__2 : rule__HashtagList__Group__2__Impl rule__HashtagList__Group__3 ;
+    // InternalGTDsl.g:412:1: rule__HashtagList__Group__2 : rule__HashtagList__Group__2__Impl rule__HashtagList__Group__3 ;
     public final void rule__HashtagList__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGTDsl.g:477:1: ( rule__HashtagList__Group__2__Impl rule__HashtagList__Group__3 )
-            // InternalGTDsl.g:478:2: rule__HashtagList__Group__2__Impl rule__HashtagList__Group__3
+            // InternalGTDsl.g:416:1: ( rule__HashtagList__Group__2__Impl rule__HashtagList__Group__3 )
+            // InternalGTDsl.g:417:2: rule__HashtagList__Group__2__Impl rule__HashtagList__Group__3
             {
-            pushFollow(FOLLOW_10);
+            pushFollow(FOLLOW_8);
             rule__HashtagList__Group__2__Impl();
 
             state._fsp--;
@@ -1448,17 +1248,17 @@ public class InternalGTDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__HashtagList__Group__2__Impl"
-    // InternalGTDsl.g:485:1: rule__HashtagList__Group__2__Impl : ( '[' ) ;
+    // InternalGTDsl.g:424:1: rule__HashtagList__Group__2__Impl : ( '[' ) ;
     public final void rule__HashtagList__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGTDsl.g:489:1: ( ( '[' ) )
-            // InternalGTDsl.g:490:1: ( '[' )
+            // InternalGTDsl.g:428:1: ( ( '[' ) )
+            // InternalGTDsl.g:429:1: ( '[' )
             {
-            // InternalGTDsl.g:490:1: ( '[' )
-            // InternalGTDsl.g:491:2: '['
+            // InternalGTDsl.g:429:1: ( '[' )
+            // InternalGTDsl.g:430:2: '['
             {
              before(grammarAccess.getHashtagListAccess().getLeftSquareBracketKeyword_2()); 
             match(input,18,FOLLOW_2); 
@@ -1485,16 +1285,16 @@ public class InternalGTDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__HashtagList__Group__3"
-    // InternalGTDsl.g:500:1: rule__HashtagList__Group__3 : rule__HashtagList__Group__3__Impl rule__HashtagList__Group__4 ;
+    // InternalGTDsl.g:439:1: rule__HashtagList__Group__3 : rule__HashtagList__Group__3__Impl rule__HashtagList__Group__4 ;
     public final void rule__HashtagList__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGTDsl.g:504:1: ( rule__HashtagList__Group__3__Impl rule__HashtagList__Group__4 )
-            // InternalGTDsl.g:505:2: rule__HashtagList__Group__3__Impl rule__HashtagList__Group__4
+            // InternalGTDsl.g:443:1: ( rule__HashtagList__Group__3__Impl rule__HashtagList__Group__4 )
+            // InternalGTDsl.g:444:2: rule__HashtagList__Group__3__Impl rule__HashtagList__Group__4
             {
-            pushFollow(FOLLOW_11);
+            pushFollow(FOLLOW_9);
             rule__HashtagList__Group__3__Impl();
 
             state._fsp--;
@@ -1523,21 +1323,21 @@ public class InternalGTDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__HashtagList__Group__3__Impl"
-    // InternalGTDsl.g:512:1: rule__HashtagList__Group__3__Impl : ( ( rule__HashtagList__Group_3__0 ) ) ;
+    // InternalGTDsl.g:451:1: rule__HashtagList__Group__3__Impl : ( ( rule__HashtagList__Group_3__0 ) ) ;
     public final void rule__HashtagList__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGTDsl.g:516:1: ( ( ( rule__HashtagList__Group_3__0 ) ) )
-            // InternalGTDsl.g:517:1: ( ( rule__HashtagList__Group_3__0 ) )
+            // InternalGTDsl.g:455:1: ( ( ( rule__HashtagList__Group_3__0 ) ) )
+            // InternalGTDsl.g:456:1: ( ( rule__HashtagList__Group_3__0 ) )
             {
-            // InternalGTDsl.g:517:1: ( ( rule__HashtagList__Group_3__0 ) )
-            // InternalGTDsl.g:518:2: ( rule__HashtagList__Group_3__0 )
+            // InternalGTDsl.g:456:1: ( ( rule__HashtagList__Group_3__0 ) )
+            // InternalGTDsl.g:457:2: ( rule__HashtagList__Group_3__0 )
             {
              before(grammarAccess.getHashtagListAccess().getGroup_3()); 
-            // InternalGTDsl.g:519:2: ( rule__HashtagList__Group_3__0 )
-            // InternalGTDsl.g:519:3: rule__HashtagList__Group_3__0
+            // InternalGTDsl.g:458:2: ( rule__HashtagList__Group_3__0 )
+            // InternalGTDsl.g:458:3: rule__HashtagList__Group_3__0
             {
             pushFollow(FOLLOW_2);
             rule__HashtagList__Group_3__0();
@@ -1570,14 +1370,14 @@ public class InternalGTDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__HashtagList__Group__4"
-    // InternalGTDsl.g:527:1: rule__HashtagList__Group__4 : rule__HashtagList__Group__4__Impl ;
+    // InternalGTDsl.g:466:1: rule__HashtagList__Group__4 : rule__HashtagList__Group__4__Impl ;
     public final void rule__HashtagList__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGTDsl.g:531:1: ( rule__HashtagList__Group__4__Impl )
-            // InternalGTDsl.g:532:2: rule__HashtagList__Group__4__Impl
+            // InternalGTDsl.g:470:1: ( rule__HashtagList__Group__4__Impl )
+            // InternalGTDsl.g:471:2: rule__HashtagList__Group__4__Impl
             {
             pushFollow(FOLLOW_2);
             rule__HashtagList__Group__4__Impl();
@@ -1603,17 +1403,17 @@ public class InternalGTDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__HashtagList__Group__4__Impl"
-    // InternalGTDsl.g:538:1: rule__HashtagList__Group__4__Impl : ( ']' ) ;
+    // InternalGTDsl.g:477:1: rule__HashtagList__Group__4__Impl : ( ']' ) ;
     public final void rule__HashtagList__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGTDsl.g:542:1: ( ( ']' ) )
-            // InternalGTDsl.g:543:1: ( ']' )
+            // InternalGTDsl.g:481:1: ( ( ']' ) )
+            // InternalGTDsl.g:482:1: ( ']' )
             {
-            // InternalGTDsl.g:543:1: ( ']' )
-            // InternalGTDsl.g:544:2: ']'
+            // InternalGTDsl.g:482:1: ( ']' )
+            // InternalGTDsl.g:483:2: ']'
             {
              before(grammarAccess.getHashtagListAccess().getRightSquareBracketKeyword_4()); 
             match(input,19,FOLLOW_2); 
@@ -1640,14 +1440,14 @@ public class InternalGTDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__HashtagList__Group_3__0"
-    // InternalGTDsl.g:554:1: rule__HashtagList__Group_3__0 : rule__HashtagList__Group_3__0__Impl rule__HashtagList__Group_3__1 ;
+    // InternalGTDsl.g:493:1: rule__HashtagList__Group_3__0 : rule__HashtagList__Group_3__0__Impl rule__HashtagList__Group_3__1 ;
     public final void rule__HashtagList__Group_3__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGTDsl.g:558:1: ( rule__HashtagList__Group_3__0__Impl rule__HashtagList__Group_3__1 )
-            // InternalGTDsl.g:559:2: rule__HashtagList__Group_3__0__Impl rule__HashtagList__Group_3__1
+            // InternalGTDsl.g:497:1: ( rule__HashtagList__Group_3__0__Impl rule__HashtagList__Group_3__1 )
+            // InternalGTDsl.g:498:2: rule__HashtagList__Group_3__0__Impl rule__HashtagList__Group_3__1
             {
             pushFollow(FOLLOW_10);
             rule__HashtagList__Group_3__0__Impl();
@@ -1678,21 +1478,21 @@ public class InternalGTDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__HashtagList__Group_3__0__Impl"
-    // InternalGTDsl.g:566:1: rule__HashtagList__Group_3__0__Impl : ( ( rule__HashtagList__HashtagAssignment_3_0 ) ) ;
+    // InternalGTDsl.g:505:1: rule__HashtagList__Group_3__0__Impl : ( ( rule__HashtagList__HashtagAssignment_3_0 ) ) ;
     public final void rule__HashtagList__Group_3__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGTDsl.g:570:1: ( ( ( rule__HashtagList__HashtagAssignment_3_0 ) ) )
-            // InternalGTDsl.g:571:1: ( ( rule__HashtagList__HashtagAssignment_3_0 ) )
+            // InternalGTDsl.g:509:1: ( ( ( rule__HashtagList__HashtagAssignment_3_0 ) ) )
+            // InternalGTDsl.g:510:1: ( ( rule__HashtagList__HashtagAssignment_3_0 ) )
             {
-            // InternalGTDsl.g:571:1: ( ( rule__HashtagList__HashtagAssignment_3_0 ) )
-            // InternalGTDsl.g:572:2: ( rule__HashtagList__HashtagAssignment_3_0 )
+            // InternalGTDsl.g:510:1: ( ( rule__HashtagList__HashtagAssignment_3_0 ) )
+            // InternalGTDsl.g:511:2: ( rule__HashtagList__HashtagAssignment_3_0 )
             {
              before(grammarAccess.getHashtagListAccess().getHashtagAssignment_3_0()); 
-            // InternalGTDsl.g:573:2: ( rule__HashtagList__HashtagAssignment_3_0 )
-            // InternalGTDsl.g:573:3: rule__HashtagList__HashtagAssignment_3_0
+            // InternalGTDsl.g:512:2: ( rule__HashtagList__HashtagAssignment_3_0 )
+            // InternalGTDsl.g:512:3: rule__HashtagList__HashtagAssignment_3_0
             {
             pushFollow(FOLLOW_2);
             rule__HashtagList__HashtagAssignment_3_0();
@@ -1725,14 +1525,14 @@ public class InternalGTDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__HashtagList__Group_3__1"
-    // InternalGTDsl.g:581:1: rule__HashtagList__Group_3__1 : rule__HashtagList__Group_3__1__Impl ;
+    // InternalGTDsl.g:520:1: rule__HashtagList__Group_3__1 : rule__HashtagList__Group_3__1__Impl ;
     public final void rule__HashtagList__Group_3__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGTDsl.g:585:1: ( rule__HashtagList__Group_3__1__Impl )
-            // InternalGTDsl.g:586:2: rule__HashtagList__Group_3__1__Impl
+            // InternalGTDsl.g:524:1: ( rule__HashtagList__Group_3__1__Impl )
+            // InternalGTDsl.g:525:2: rule__HashtagList__Group_3__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__HashtagList__Group_3__1__Impl();
@@ -1758,58 +1558,58 @@ public class InternalGTDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__HashtagList__Group_3__1__Impl"
-    // InternalGTDsl.g:592:1: rule__HashtagList__Group_3__1__Impl : ( ( ( rule__HashtagList__HashtagAssignment_3_1 ) ) ( ( rule__HashtagList__HashtagAssignment_3_1 )* ) ) ;
+    // InternalGTDsl.g:531:1: rule__HashtagList__Group_3__1__Impl : ( ( ( rule__HashtagList__Group_3_1__0 ) ) ( ( rule__HashtagList__Group_3_1__0 )* ) ) ;
     public final void rule__HashtagList__Group_3__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGTDsl.g:596:1: ( ( ( ( rule__HashtagList__HashtagAssignment_3_1 ) ) ( ( rule__HashtagList__HashtagAssignment_3_1 )* ) ) )
-            // InternalGTDsl.g:597:1: ( ( ( rule__HashtagList__HashtagAssignment_3_1 ) ) ( ( rule__HashtagList__HashtagAssignment_3_1 )* ) )
+            // InternalGTDsl.g:535:1: ( ( ( ( rule__HashtagList__Group_3_1__0 ) ) ( ( rule__HashtagList__Group_3_1__0 )* ) ) )
+            // InternalGTDsl.g:536:1: ( ( ( rule__HashtagList__Group_3_1__0 ) ) ( ( rule__HashtagList__Group_3_1__0 )* ) )
             {
-            // InternalGTDsl.g:597:1: ( ( ( rule__HashtagList__HashtagAssignment_3_1 ) ) ( ( rule__HashtagList__HashtagAssignment_3_1 )* ) )
-            // InternalGTDsl.g:598:2: ( ( rule__HashtagList__HashtagAssignment_3_1 ) ) ( ( rule__HashtagList__HashtagAssignment_3_1 )* )
+            // InternalGTDsl.g:536:1: ( ( ( rule__HashtagList__Group_3_1__0 ) ) ( ( rule__HashtagList__Group_3_1__0 )* ) )
+            // InternalGTDsl.g:537:2: ( ( rule__HashtagList__Group_3_1__0 ) ) ( ( rule__HashtagList__Group_3_1__0 )* )
             {
-            // InternalGTDsl.g:598:2: ( ( rule__HashtagList__HashtagAssignment_3_1 ) )
-            // InternalGTDsl.g:599:3: ( rule__HashtagList__HashtagAssignment_3_1 )
+            // InternalGTDsl.g:537:2: ( ( rule__HashtagList__Group_3_1__0 ) )
+            // InternalGTDsl.g:538:3: ( rule__HashtagList__Group_3_1__0 )
             {
-             before(grammarAccess.getHashtagListAccess().getHashtagAssignment_3_1()); 
-            // InternalGTDsl.g:600:3: ( rule__HashtagList__HashtagAssignment_3_1 )
-            // InternalGTDsl.g:600:4: rule__HashtagList__HashtagAssignment_3_1
+             before(grammarAccess.getHashtagListAccess().getGroup_3_1()); 
+            // InternalGTDsl.g:539:3: ( rule__HashtagList__Group_3_1__0 )
+            // InternalGTDsl.g:539:4: rule__HashtagList__Group_3_1__0
             {
-            pushFollow(FOLLOW_12);
-            rule__HashtagList__HashtagAssignment_3_1();
+            pushFollow(FOLLOW_11);
+            rule__HashtagList__Group_3_1__0();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getHashtagListAccess().getHashtagAssignment_3_1()); 
+             after(grammarAccess.getHashtagListAccess().getGroup_3_1()); 
 
             }
 
-            // InternalGTDsl.g:603:2: ( ( rule__HashtagList__HashtagAssignment_3_1 )* )
-            // InternalGTDsl.g:604:3: ( rule__HashtagList__HashtagAssignment_3_1 )*
+            // InternalGTDsl.g:542:2: ( ( rule__HashtagList__Group_3_1__0 )* )
+            // InternalGTDsl.g:543:3: ( rule__HashtagList__Group_3_1__0 )*
             {
-             before(grammarAccess.getHashtagListAccess().getHashtagAssignment_3_1()); 
-            // InternalGTDsl.g:605:3: ( rule__HashtagList__HashtagAssignment_3_1 )*
-            loop5:
+             before(grammarAccess.getHashtagListAccess().getGroup_3_1()); 
+            // InternalGTDsl.g:544:3: ( rule__HashtagList__Group_3_1__0 )*
+            loop4:
             do {
-                int alt5=2;
-                int LA5_0 = input.LA(1);
+                int alt4=2;
+                int LA4_0 = input.LA(1);
 
-                if ( (LA5_0==15) ) {
-                    alt5=1;
+                if ( (LA4_0==20) ) {
+                    alt4=1;
                 }
 
 
-                switch (alt5) {
+                switch (alt4) {
             	case 1 :
-            	    // InternalGTDsl.g:605:4: rule__HashtagList__HashtagAssignment_3_1
+            	    // InternalGTDsl.g:544:4: rule__HashtagList__Group_3_1__0
             	    {
-            	    pushFollow(FOLLOW_12);
-            	    rule__HashtagList__HashtagAssignment_3_1();
+            	    pushFollow(FOLLOW_11);
+            	    rule__HashtagList__Group_3_1__0();
 
             	    state._fsp--;
 
@@ -1818,11 +1618,11 @@ public class InternalGTDslParser extends AbstractInternalContentAssistParser {
             	    break;
 
             	default :
-            	    break loop5;
+            	    break loop4;
                 }
             } while (true);
 
-             after(grammarAccess.getHashtagListAccess().getHashtagAssignment_3_1()); 
+             after(grammarAccess.getHashtagListAccess().getGroup_3_1()); 
 
             }
 
@@ -1847,17 +1647,172 @@ public class InternalGTDslParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__HashtagList__Group_3__1__Impl"
 
 
+    // $ANTLR start "rule__HashtagList__Group_3_1__0"
+    // InternalGTDsl.g:554:1: rule__HashtagList__Group_3_1__0 : rule__HashtagList__Group_3_1__0__Impl rule__HashtagList__Group_3_1__1 ;
+    public final void rule__HashtagList__Group_3_1__0() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalGTDsl.g:558:1: ( rule__HashtagList__Group_3_1__0__Impl rule__HashtagList__Group_3_1__1 )
+            // InternalGTDsl.g:559:2: rule__HashtagList__Group_3_1__0__Impl rule__HashtagList__Group_3_1__1
+            {
+            pushFollow(FOLLOW_8);
+            rule__HashtagList__Group_3_1__0__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_2);
+            rule__HashtagList__Group_3_1__1();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__HashtagList__Group_3_1__0"
+
+
+    // $ANTLR start "rule__HashtagList__Group_3_1__0__Impl"
+    // InternalGTDsl.g:566:1: rule__HashtagList__Group_3_1__0__Impl : ( ',' ) ;
+    public final void rule__HashtagList__Group_3_1__0__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalGTDsl.g:570:1: ( ( ',' ) )
+            // InternalGTDsl.g:571:1: ( ',' )
+            {
+            // InternalGTDsl.g:571:1: ( ',' )
+            // InternalGTDsl.g:572:2: ','
+            {
+             before(grammarAccess.getHashtagListAccess().getCommaKeyword_3_1_0()); 
+            match(input,20,FOLLOW_2); 
+             after(grammarAccess.getHashtagListAccess().getCommaKeyword_3_1_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__HashtagList__Group_3_1__0__Impl"
+
+
+    // $ANTLR start "rule__HashtagList__Group_3_1__1"
+    // InternalGTDsl.g:581:1: rule__HashtagList__Group_3_1__1 : rule__HashtagList__Group_3_1__1__Impl ;
+    public final void rule__HashtagList__Group_3_1__1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalGTDsl.g:585:1: ( rule__HashtagList__Group_3_1__1__Impl )
+            // InternalGTDsl.g:586:2: rule__HashtagList__Group_3_1__1__Impl
+            {
+            pushFollow(FOLLOW_2);
+            rule__HashtagList__Group_3_1__1__Impl();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__HashtagList__Group_3_1__1"
+
+
+    // $ANTLR start "rule__HashtagList__Group_3_1__1__Impl"
+    // InternalGTDsl.g:592:1: rule__HashtagList__Group_3_1__1__Impl : ( ( rule__HashtagList__HashtagAssignment_3_1_1 ) ) ;
+    public final void rule__HashtagList__Group_3_1__1__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalGTDsl.g:596:1: ( ( ( rule__HashtagList__HashtagAssignment_3_1_1 ) ) )
+            // InternalGTDsl.g:597:1: ( ( rule__HashtagList__HashtagAssignment_3_1_1 ) )
+            {
+            // InternalGTDsl.g:597:1: ( ( rule__HashtagList__HashtagAssignment_3_1_1 ) )
+            // InternalGTDsl.g:598:2: ( rule__HashtagList__HashtagAssignment_3_1_1 )
+            {
+             before(grammarAccess.getHashtagListAccess().getHashtagAssignment_3_1_1()); 
+            // InternalGTDsl.g:599:2: ( rule__HashtagList__HashtagAssignment_3_1_1 )
+            // InternalGTDsl.g:599:3: rule__HashtagList__HashtagAssignment_3_1_1
+            {
+            pushFollow(FOLLOW_2);
+            rule__HashtagList__HashtagAssignment_3_1_1();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getHashtagListAccess().getHashtagAssignment_3_1_1()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__HashtagList__Group_3_1__1__Impl"
+
+
     // $ANTLR start "rule__Country__Group__0"
-    // InternalGTDsl.g:615:1: rule__Country__Group__0 : rule__Country__Group__0__Impl rule__Country__Group__1 ;
+    // InternalGTDsl.g:608:1: rule__Country__Group__0 : rule__Country__Group__0__Impl rule__Country__Group__1 ;
     public final void rule__Country__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGTDsl.g:619:1: ( rule__Country__Group__0__Impl rule__Country__Group__1 )
-            // InternalGTDsl.g:620:2: rule__Country__Group__0__Impl rule__Country__Group__1
+            // InternalGTDsl.g:612:1: ( rule__Country__Group__0__Impl rule__Country__Group__1 )
+            // InternalGTDsl.g:613:2: rule__Country__Group__0__Impl rule__Country__Group__1
             {
-            pushFollow(FOLLOW_6);
+            pushFollow(FOLLOW_4);
             rule__Country__Group__0__Impl();
 
             state._fsp--;
@@ -1886,20 +1841,20 @@ public class InternalGTDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Country__Group__0__Impl"
-    // InternalGTDsl.g:627:1: rule__Country__Group__0__Impl : ( 'country' ) ;
+    // InternalGTDsl.g:620:1: rule__Country__Group__0__Impl : ( 'country' ) ;
     public final void rule__Country__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGTDsl.g:631:1: ( ( 'country' ) )
-            // InternalGTDsl.g:632:1: ( 'country' )
+            // InternalGTDsl.g:624:1: ( ( 'country' ) )
+            // InternalGTDsl.g:625:1: ( 'country' )
             {
-            // InternalGTDsl.g:632:1: ( 'country' )
-            // InternalGTDsl.g:633:2: 'country'
+            // InternalGTDsl.g:625:1: ( 'country' )
+            // InternalGTDsl.g:626:2: 'country'
             {
              before(grammarAccess.getCountryAccess().getCountryKeyword_0()); 
-            match(input,20,FOLLOW_2); 
+            match(input,21,FOLLOW_2); 
              after(grammarAccess.getCountryAccess().getCountryKeyword_0()); 
 
             }
@@ -1923,14 +1878,14 @@ public class InternalGTDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Country__Group__1"
-    // InternalGTDsl.g:642:1: rule__Country__Group__1 : rule__Country__Group__1__Impl ;
+    // InternalGTDsl.g:635:1: rule__Country__Group__1 : rule__Country__Group__1__Impl ;
     public final void rule__Country__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGTDsl.g:646:1: ( rule__Country__Group__1__Impl )
-            // InternalGTDsl.g:647:2: rule__Country__Group__1__Impl
+            // InternalGTDsl.g:639:1: ( rule__Country__Group__1__Impl )
+            // InternalGTDsl.g:640:2: rule__Country__Group__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Country__Group__1__Impl();
@@ -1956,21 +1911,21 @@ public class InternalGTDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Country__Group__1__Impl"
-    // InternalGTDsl.g:653:1: rule__Country__Group__1__Impl : ( ( rule__Country__NameAssignment_1 ) ) ;
+    // InternalGTDsl.g:646:1: rule__Country__Group__1__Impl : ( ( rule__Country__NameAssignment_1 ) ) ;
     public final void rule__Country__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGTDsl.g:657:1: ( ( ( rule__Country__NameAssignment_1 ) ) )
-            // InternalGTDsl.g:658:1: ( ( rule__Country__NameAssignment_1 ) )
+            // InternalGTDsl.g:650:1: ( ( ( rule__Country__NameAssignment_1 ) ) )
+            // InternalGTDsl.g:651:1: ( ( rule__Country__NameAssignment_1 ) )
             {
-            // InternalGTDsl.g:658:1: ( ( rule__Country__NameAssignment_1 ) )
-            // InternalGTDsl.g:659:2: ( rule__Country__NameAssignment_1 )
+            // InternalGTDsl.g:651:1: ( ( rule__Country__NameAssignment_1 ) )
+            // InternalGTDsl.g:652:2: ( rule__Country__NameAssignment_1 )
             {
              before(grammarAccess.getCountryAccess().getNameAssignment_1()); 
-            // InternalGTDsl.g:660:2: ( rule__Country__NameAssignment_1 )
-            // InternalGTDsl.g:660:3: rule__Country__NameAssignment_1
+            // InternalGTDsl.g:653:2: ( rule__Country__NameAssignment_1 )
+            // InternalGTDsl.g:653:3: rule__Country__NameAssignment_1
             {
             pushFollow(FOLLOW_2);
             rule__Country__NameAssignment_1();
@@ -2003,16 +1958,16 @@ public class InternalGTDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CountryList__Group__0"
-    // InternalGTDsl.g:669:1: rule__CountryList__Group__0 : rule__CountryList__Group__0__Impl rule__CountryList__Group__1 ;
+    // InternalGTDsl.g:662:1: rule__CountryList__Group__0 : rule__CountryList__Group__0__Impl rule__CountryList__Group__1 ;
     public final void rule__CountryList__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGTDsl.g:673:1: ( rule__CountryList__Group__0__Impl rule__CountryList__Group__1 )
-            // InternalGTDsl.g:674:2: rule__CountryList__Group__0__Impl rule__CountryList__Group__1
+            // InternalGTDsl.g:666:1: ( rule__CountryList__Group__0__Impl rule__CountryList__Group__1 )
+            // InternalGTDsl.g:667:2: rule__CountryList__Group__0__Impl rule__CountryList__Group__1
             {
-            pushFollow(FOLLOW_6);
+            pushFollow(FOLLOW_4);
             rule__CountryList__Group__0__Impl();
 
             state._fsp--;
@@ -2041,20 +1996,20 @@ public class InternalGTDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CountryList__Group__0__Impl"
-    // InternalGTDsl.g:681:1: rule__CountryList__Group__0__Impl : ( 'countries' ) ;
+    // InternalGTDsl.g:674:1: rule__CountryList__Group__0__Impl : ( 'countries' ) ;
     public final void rule__CountryList__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGTDsl.g:685:1: ( ( 'countries' ) )
-            // InternalGTDsl.g:686:1: ( 'countries' )
+            // InternalGTDsl.g:678:1: ( ( 'countries' ) )
+            // InternalGTDsl.g:679:1: ( 'countries' )
             {
-            // InternalGTDsl.g:686:1: ( 'countries' )
-            // InternalGTDsl.g:687:2: 'countries'
+            // InternalGTDsl.g:679:1: ( 'countries' )
+            // InternalGTDsl.g:680:2: 'countries'
             {
              before(grammarAccess.getCountryListAccess().getCountriesKeyword_0()); 
-            match(input,21,FOLLOW_2); 
+            match(input,22,FOLLOW_2); 
              after(grammarAccess.getCountryListAccess().getCountriesKeyword_0()); 
 
             }
@@ -2078,16 +2033,16 @@ public class InternalGTDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CountryList__Group__1"
-    // InternalGTDsl.g:696:1: rule__CountryList__Group__1 : rule__CountryList__Group__1__Impl rule__CountryList__Group__2 ;
+    // InternalGTDsl.g:689:1: rule__CountryList__Group__1 : rule__CountryList__Group__1__Impl rule__CountryList__Group__2 ;
     public final void rule__CountryList__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGTDsl.g:700:1: ( rule__CountryList__Group__1__Impl rule__CountryList__Group__2 )
-            // InternalGTDsl.g:701:2: rule__CountryList__Group__1__Impl rule__CountryList__Group__2
+            // InternalGTDsl.g:693:1: ( rule__CountryList__Group__1__Impl rule__CountryList__Group__2 )
+            // InternalGTDsl.g:694:2: rule__CountryList__Group__1__Impl rule__CountryList__Group__2
             {
-            pushFollow(FOLLOW_9);
+            pushFollow(FOLLOW_7);
             rule__CountryList__Group__1__Impl();
 
             state._fsp--;
@@ -2116,21 +2071,21 @@ public class InternalGTDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CountryList__Group__1__Impl"
-    // InternalGTDsl.g:708:1: rule__CountryList__Group__1__Impl : ( ( rule__CountryList__NameAssignment_1 ) ) ;
+    // InternalGTDsl.g:701:1: rule__CountryList__Group__1__Impl : ( ( rule__CountryList__NameAssignment_1 ) ) ;
     public final void rule__CountryList__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGTDsl.g:712:1: ( ( ( rule__CountryList__NameAssignment_1 ) ) )
-            // InternalGTDsl.g:713:1: ( ( rule__CountryList__NameAssignment_1 ) )
+            // InternalGTDsl.g:705:1: ( ( ( rule__CountryList__NameAssignment_1 ) ) )
+            // InternalGTDsl.g:706:1: ( ( rule__CountryList__NameAssignment_1 ) )
             {
-            // InternalGTDsl.g:713:1: ( ( rule__CountryList__NameAssignment_1 ) )
-            // InternalGTDsl.g:714:2: ( rule__CountryList__NameAssignment_1 )
+            // InternalGTDsl.g:706:1: ( ( rule__CountryList__NameAssignment_1 ) )
+            // InternalGTDsl.g:707:2: ( rule__CountryList__NameAssignment_1 )
             {
              before(grammarAccess.getCountryListAccess().getNameAssignment_1()); 
-            // InternalGTDsl.g:715:2: ( rule__CountryList__NameAssignment_1 )
-            // InternalGTDsl.g:715:3: rule__CountryList__NameAssignment_1
+            // InternalGTDsl.g:708:2: ( rule__CountryList__NameAssignment_1 )
+            // InternalGTDsl.g:708:3: rule__CountryList__NameAssignment_1
             {
             pushFollow(FOLLOW_2);
             rule__CountryList__NameAssignment_1();
@@ -2163,16 +2118,16 @@ public class InternalGTDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CountryList__Group__2"
-    // InternalGTDsl.g:723:1: rule__CountryList__Group__2 : rule__CountryList__Group__2__Impl rule__CountryList__Group__3 ;
+    // InternalGTDsl.g:716:1: rule__CountryList__Group__2 : rule__CountryList__Group__2__Impl rule__CountryList__Group__3 ;
     public final void rule__CountryList__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGTDsl.g:727:1: ( rule__CountryList__Group__2__Impl rule__CountryList__Group__3 )
-            // InternalGTDsl.g:728:2: rule__CountryList__Group__2__Impl rule__CountryList__Group__3
+            // InternalGTDsl.g:720:1: ( rule__CountryList__Group__2__Impl rule__CountryList__Group__3 )
+            // InternalGTDsl.g:721:2: rule__CountryList__Group__2__Impl rule__CountryList__Group__3
             {
-            pushFollow(FOLLOW_13);
+            pushFollow(FOLLOW_12);
             rule__CountryList__Group__2__Impl();
 
             state._fsp--;
@@ -2201,17 +2156,17 @@ public class InternalGTDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CountryList__Group__2__Impl"
-    // InternalGTDsl.g:735:1: rule__CountryList__Group__2__Impl : ( '[' ) ;
+    // InternalGTDsl.g:728:1: rule__CountryList__Group__2__Impl : ( '[' ) ;
     public final void rule__CountryList__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGTDsl.g:739:1: ( ( '[' ) )
-            // InternalGTDsl.g:740:1: ( '[' )
+            // InternalGTDsl.g:732:1: ( ( '[' ) )
+            // InternalGTDsl.g:733:1: ( '[' )
             {
-            // InternalGTDsl.g:740:1: ( '[' )
-            // InternalGTDsl.g:741:2: '['
+            // InternalGTDsl.g:733:1: ( '[' )
+            // InternalGTDsl.g:734:2: '['
             {
              before(grammarAccess.getCountryListAccess().getLeftSquareBracketKeyword_2()); 
             match(input,18,FOLLOW_2); 
@@ -2238,16 +2193,16 @@ public class InternalGTDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CountryList__Group__3"
-    // InternalGTDsl.g:750:1: rule__CountryList__Group__3 : rule__CountryList__Group__3__Impl rule__CountryList__Group__4 ;
+    // InternalGTDsl.g:743:1: rule__CountryList__Group__3 : rule__CountryList__Group__3__Impl rule__CountryList__Group__4 ;
     public final void rule__CountryList__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGTDsl.g:754:1: ( rule__CountryList__Group__3__Impl rule__CountryList__Group__4 )
-            // InternalGTDsl.g:755:2: rule__CountryList__Group__3__Impl rule__CountryList__Group__4
+            // InternalGTDsl.g:747:1: ( rule__CountryList__Group__3__Impl rule__CountryList__Group__4 )
+            // InternalGTDsl.g:748:2: rule__CountryList__Group__3__Impl rule__CountryList__Group__4
             {
-            pushFollow(FOLLOW_11);
+            pushFollow(FOLLOW_9);
             rule__CountryList__Group__3__Impl();
 
             state._fsp--;
@@ -2276,21 +2231,21 @@ public class InternalGTDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CountryList__Group__3__Impl"
-    // InternalGTDsl.g:762:1: rule__CountryList__Group__3__Impl : ( ( rule__CountryList__Group_3__0 ) ) ;
+    // InternalGTDsl.g:755:1: rule__CountryList__Group__3__Impl : ( ( rule__CountryList__Group_3__0 ) ) ;
     public final void rule__CountryList__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGTDsl.g:766:1: ( ( ( rule__CountryList__Group_3__0 ) ) )
-            // InternalGTDsl.g:767:1: ( ( rule__CountryList__Group_3__0 ) )
+            // InternalGTDsl.g:759:1: ( ( ( rule__CountryList__Group_3__0 ) ) )
+            // InternalGTDsl.g:760:1: ( ( rule__CountryList__Group_3__0 ) )
             {
-            // InternalGTDsl.g:767:1: ( ( rule__CountryList__Group_3__0 ) )
-            // InternalGTDsl.g:768:2: ( rule__CountryList__Group_3__0 )
+            // InternalGTDsl.g:760:1: ( ( rule__CountryList__Group_3__0 ) )
+            // InternalGTDsl.g:761:2: ( rule__CountryList__Group_3__0 )
             {
              before(grammarAccess.getCountryListAccess().getGroup_3()); 
-            // InternalGTDsl.g:769:2: ( rule__CountryList__Group_3__0 )
-            // InternalGTDsl.g:769:3: rule__CountryList__Group_3__0
+            // InternalGTDsl.g:762:2: ( rule__CountryList__Group_3__0 )
+            // InternalGTDsl.g:762:3: rule__CountryList__Group_3__0
             {
             pushFollow(FOLLOW_2);
             rule__CountryList__Group_3__0();
@@ -2323,14 +2278,14 @@ public class InternalGTDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CountryList__Group__4"
-    // InternalGTDsl.g:777:1: rule__CountryList__Group__4 : rule__CountryList__Group__4__Impl ;
+    // InternalGTDsl.g:770:1: rule__CountryList__Group__4 : rule__CountryList__Group__4__Impl ;
     public final void rule__CountryList__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGTDsl.g:781:1: ( rule__CountryList__Group__4__Impl )
-            // InternalGTDsl.g:782:2: rule__CountryList__Group__4__Impl
+            // InternalGTDsl.g:774:1: ( rule__CountryList__Group__4__Impl )
+            // InternalGTDsl.g:775:2: rule__CountryList__Group__4__Impl
             {
             pushFollow(FOLLOW_2);
             rule__CountryList__Group__4__Impl();
@@ -2356,17 +2311,17 @@ public class InternalGTDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CountryList__Group__4__Impl"
-    // InternalGTDsl.g:788:1: rule__CountryList__Group__4__Impl : ( ']' ) ;
+    // InternalGTDsl.g:781:1: rule__CountryList__Group__4__Impl : ( ']' ) ;
     public final void rule__CountryList__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGTDsl.g:792:1: ( ( ']' ) )
-            // InternalGTDsl.g:793:1: ( ']' )
+            // InternalGTDsl.g:785:1: ( ( ']' ) )
+            // InternalGTDsl.g:786:1: ( ']' )
             {
-            // InternalGTDsl.g:793:1: ( ']' )
-            // InternalGTDsl.g:794:2: ']'
+            // InternalGTDsl.g:786:1: ( ']' )
+            // InternalGTDsl.g:787:2: ']'
             {
              before(grammarAccess.getCountryListAccess().getRightSquareBracketKeyword_4()); 
             match(input,19,FOLLOW_2); 
@@ -2393,16 +2348,16 @@ public class InternalGTDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CountryList__Group_3__0"
-    // InternalGTDsl.g:804:1: rule__CountryList__Group_3__0 : rule__CountryList__Group_3__0__Impl rule__CountryList__Group_3__1 ;
+    // InternalGTDsl.g:797:1: rule__CountryList__Group_3__0 : rule__CountryList__Group_3__0__Impl rule__CountryList__Group_3__1 ;
     public final void rule__CountryList__Group_3__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGTDsl.g:808:1: ( rule__CountryList__Group_3__0__Impl rule__CountryList__Group_3__1 )
-            // InternalGTDsl.g:809:2: rule__CountryList__Group_3__0__Impl rule__CountryList__Group_3__1
+            // InternalGTDsl.g:801:1: ( rule__CountryList__Group_3__0__Impl rule__CountryList__Group_3__1 )
+            // InternalGTDsl.g:802:2: rule__CountryList__Group_3__0__Impl rule__CountryList__Group_3__1
             {
-            pushFollow(FOLLOW_14);
+            pushFollow(FOLLOW_10);
             rule__CountryList__Group_3__0__Impl();
 
             state._fsp--;
@@ -2431,21 +2386,21 @@ public class InternalGTDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CountryList__Group_3__0__Impl"
-    // InternalGTDsl.g:816:1: rule__CountryList__Group_3__0__Impl : ( ( rule__CountryList__CountryAssignment_3_0 ) ) ;
+    // InternalGTDsl.g:809:1: rule__CountryList__Group_3__0__Impl : ( ( rule__CountryList__CountryAssignment_3_0 ) ) ;
     public final void rule__CountryList__Group_3__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGTDsl.g:820:1: ( ( ( rule__CountryList__CountryAssignment_3_0 ) ) )
-            // InternalGTDsl.g:821:1: ( ( rule__CountryList__CountryAssignment_3_0 ) )
+            // InternalGTDsl.g:813:1: ( ( ( rule__CountryList__CountryAssignment_3_0 ) ) )
+            // InternalGTDsl.g:814:1: ( ( rule__CountryList__CountryAssignment_3_0 ) )
             {
-            // InternalGTDsl.g:821:1: ( ( rule__CountryList__CountryAssignment_3_0 ) )
-            // InternalGTDsl.g:822:2: ( rule__CountryList__CountryAssignment_3_0 )
+            // InternalGTDsl.g:814:1: ( ( rule__CountryList__CountryAssignment_3_0 ) )
+            // InternalGTDsl.g:815:2: ( rule__CountryList__CountryAssignment_3_0 )
             {
              before(grammarAccess.getCountryListAccess().getCountryAssignment_3_0()); 
-            // InternalGTDsl.g:823:2: ( rule__CountryList__CountryAssignment_3_0 )
-            // InternalGTDsl.g:823:3: rule__CountryList__CountryAssignment_3_0
+            // InternalGTDsl.g:816:2: ( rule__CountryList__CountryAssignment_3_0 )
+            // InternalGTDsl.g:816:3: rule__CountryList__CountryAssignment_3_0
             {
             pushFollow(FOLLOW_2);
             rule__CountryList__CountryAssignment_3_0();
@@ -2478,14 +2433,14 @@ public class InternalGTDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CountryList__Group_3__1"
-    // InternalGTDsl.g:831:1: rule__CountryList__Group_3__1 : rule__CountryList__Group_3__1__Impl ;
+    // InternalGTDsl.g:824:1: rule__CountryList__Group_3__1 : rule__CountryList__Group_3__1__Impl ;
     public final void rule__CountryList__Group_3__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGTDsl.g:835:1: ( rule__CountryList__Group_3__1__Impl )
-            // InternalGTDsl.g:836:2: rule__CountryList__Group_3__1__Impl
+            // InternalGTDsl.g:828:1: ( rule__CountryList__Group_3__1__Impl )
+            // InternalGTDsl.g:829:2: rule__CountryList__Group_3__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__CountryList__Group_3__1__Impl();
@@ -2511,35 +2466,35 @@ public class InternalGTDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CountryList__Group_3__1__Impl"
-    // InternalGTDsl.g:842:1: rule__CountryList__Group_3__1__Impl : ( ( rule__CountryList__Group_3_1__0 )* ) ;
+    // InternalGTDsl.g:835:1: rule__CountryList__Group_3__1__Impl : ( ( rule__CountryList__Group_3_1__0 )* ) ;
     public final void rule__CountryList__Group_3__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGTDsl.g:846:1: ( ( ( rule__CountryList__Group_3_1__0 )* ) )
-            // InternalGTDsl.g:847:1: ( ( rule__CountryList__Group_3_1__0 )* )
+            // InternalGTDsl.g:839:1: ( ( ( rule__CountryList__Group_3_1__0 )* ) )
+            // InternalGTDsl.g:840:1: ( ( rule__CountryList__Group_3_1__0 )* )
             {
-            // InternalGTDsl.g:847:1: ( ( rule__CountryList__Group_3_1__0 )* )
-            // InternalGTDsl.g:848:2: ( rule__CountryList__Group_3_1__0 )*
+            // InternalGTDsl.g:840:1: ( ( rule__CountryList__Group_3_1__0 )* )
+            // InternalGTDsl.g:841:2: ( rule__CountryList__Group_3_1__0 )*
             {
              before(grammarAccess.getCountryListAccess().getGroup_3_1()); 
-            // InternalGTDsl.g:849:2: ( rule__CountryList__Group_3_1__0 )*
-            loop6:
+            // InternalGTDsl.g:842:2: ( rule__CountryList__Group_3_1__0 )*
+            loop5:
             do {
-                int alt6=2;
-                int LA6_0 = input.LA(1);
+                int alt5=2;
+                int LA5_0 = input.LA(1);
 
-                if ( (LA6_0==22) ) {
-                    alt6=1;
+                if ( (LA5_0==20) ) {
+                    alt5=1;
                 }
 
 
-                switch (alt6) {
+                switch (alt5) {
             	case 1 :
-            	    // InternalGTDsl.g:849:3: rule__CountryList__Group_3_1__0
+            	    // InternalGTDsl.g:842:3: rule__CountryList__Group_3_1__0
             	    {
-            	    pushFollow(FOLLOW_15);
+            	    pushFollow(FOLLOW_11);
             	    rule__CountryList__Group_3_1__0();
 
             	    state._fsp--;
@@ -2549,7 +2504,7 @@ public class InternalGTDslParser extends AbstractInternalContentAssistParser {
             	    break;
 
             	default :
-            	    break loop6;
+            	    break loop5;
                 }
             } while (true);
 
@@ -2576,16 +2531,16 @@ public class InternalGTDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CountryList__Group_3_1__0"
-    // InternalGTDsl.g:858:1: rule__CountryList__Group_3_1__0 : rule__CountryList__Group_3_1__0__Impl rule__CountryList__Group_3_1__1 ;
+    // InternalGTDsl.g:851:1: rule__CountryList__Group_3_1__0 : rule__CountryList__Group_3_1__0__Impl rule__CountryList__Group_3_1__1 ;
     public final void rule__CountryList__Group_3_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGTDsl.g:862:1: ( rule__CountryList__Group_3_1__0__Impl rule__CountryList__Group_3_1__1 )
-            // InternalGTDsl.g:863:2: rule__CountryList__Group_3_1__0__Impl rule__CountryList__Group_3_1__1
+            // InternalGTDsl.g:855:1: ( rule__CountryList__Group_3_1__0__Impl rule__CountryList__Group_3_1__1 )
+            // InternalGTDsl.g:856:2: rule__CountryList__Group_3_1__0__Impl rule__CountryList__Group_3_1__1
             {
-            pushFollow(FOLLOW_13);
+            pushFollow(FOLLOW_12);
             rule__CountryList__Group_3_1__0__Impl();
 
             state._fsp--;
@@ -2614,20 +2569,20 @@ public class InternalGTDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CountryList__Group_3_1__0__Impl"
-    // InternalGTDsl.g:870:1: rule__CountryList__Group_3_1__0__Impl : ( ',' ) ;
+    // InternalGTDsl.g:863:1: rule__CountryList__Group_3_1__0__Impl : ( ',' ) ;
     public final void rule__CountryList__Group_3_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGTDsl.g:874:1: ( ( ',' ) )
-            // InternalGTDsl.g:875:1: ( ',' )
+            // InternalGTDsl.g:867:1: ( ( ',' ) )
+            // InternalGTDsl.g:868:1: ( ',' )
             {
-            // InternalGTDsl.g:875:1: ( ',' )
-            // InternalGTDsl.g:876:2: ','
+            // InternalGTDsl.g:868:1: ( ',' )
+            // InternalGTDsl.g:869:2: ','
             {
              before(grammarAccess.getCountryListAccess().getCommaKeyword_3_1_0()); 
-            match(input,22,FOLLOW_2); 
+            match(input,20,FOLLOW_2); 
              after(grammarAccess.getCountryListAccess().getCommaKeyword_3_1_0()); 
 
             }
@@ -2651,14 +2606,14 @@ public class InternalGTDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CountryList__Group_3_1__1"
-    // InternalGTDsl.g:885:1: rule__CountryList__Group_3_1__1 : rule__CountryList__Group_3_1__1__Impl ;
+    // InternalGTDsl.g:878:1: rule__CountryList__Group_3_1__1 : rule__CountryList__Group_3_1__1__Impl ;
     public final void rule__CountryList__Group_3_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGTDsl.g:889:1: ( rule__CountryList__Group_3_1__1__Impl )
-            // InternalGTDsl.g:890:2: rule__CountryList__Group_3_1__1__Impl
+            // InternalGTDsl.g:882:1: ( rule__CountryList__Group_3_1__1__Impl )
+            // InternalGTDsl.g:883:2: rule__CountryList__Group_3_1__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__CountryList__Group_3_1__1__Impl();
@@ -2684,21 +2639,21 @@ public class InternalGTDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CountryList__Group_3_1__1__Impl"
-    // InternalGTDsl.g:896:1: rule__CountryList__Group_3_1__1__Impl : ( ( rule__CountryList__CountryAssignment_3_1_1 ) ) ;
+    // InternalGTDsl.g:889:1: rule__CountryList__Group_3_1__1__Impl : ( ( rule__CountryList__CountryAssignment_3_1_1 ) ) ;
     public final void rule__CountryList__Group_3_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGTDsl.g:900:1: ( ( ( rule__CountryList__CountryAssignment_3_1_1 ) ) )
-            // InternalGTDsl.g:901:1: ( ( rule__CountryList__CountryAssignment_3_1_1 ) )
+            // InternalGTDsl.g:893:1: ( ( ( rule__CountryList__CountryAssignment_3_1_1 ) ) )
+            // InternalGTDsl.g:894:1: ( ( rule__CountryList__CountryAssignment_3_1_1 ) )
             {
-            // InternalGTDsl.g:901:1: ( ( rule__CountryList__CountryAssignment_3_1_1 ) )
-            // InternalGTDsl.g:902:2: ( rule__CountryList__CountryAssignment_3_1_1 )
+            // InternalGTDsl.g:894:1: ( ( rule__CountryList__CountryAssignment_3_1_1 ) )
+            // InternalGTDsl.g:895:2: ( rule__CountryList__CountryAssignment_3_1_1 )
             {
              before(grammarAccess.getCountryListAccess().getCountryAssignment_3_1_1()); 
-            // InternalGTDsl.g:903:2: ( rule__CountryList__CountryAssignment_3_1_1 )
-            // InternalGTDsl.g:903:3: rule__CountryList__CountryAssignment_3_1_1
+            // InternalGTDsl.g:896:2: ( rule__CountryList__CountryAssignment_3_1_1 )
+            // InternalGTDsl.g:896:3: rule__CountryList__CountryAssignment_3_1_1
             {
             pushFollow(FOLLOW_2);
             rule__CountryList__CountryAssignment_3_1_1();
@@ -2731,17 +2686,17 @@ public class InternalGTDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Model__ElementsAssignment"
-    // InternalGTDsl.g:912:1: rule__Model__ElementsAssignment : ( ruleType ) ;
+    // InternalGTDsl.g:905:1: rule__Model__ElementsAssignment : ( ruleType ) ;
     public final void rule__Model__ElementsAssignment() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGTDsl.g:916:1: ( ( ruleType ) )
-            // InternalGTDsl.g:917:2: ( ruleType )
+            // InternalGTDsl.g:909:1: ( ( ruleType ) )
+            // InternalGTDsl.g:910:2: ( ruleType )
             {
-            // InternalGTDsl.g:917:2: ( ruleType )
-            // InternalGTDsl.g:918:3: ruleType
+            // InternalGTDsl.g:910:2: ( ruleType )
+            // InternalGTDsl.g:911:3: ruleType
             {
              before(grammarAccess.getModelAccess().getElementsTypeParserRuleCall_0()); 
             pushFollow(FOLLOW_2);
@@ -2771,22 +2726,22 @@ public class InternalGTDslParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__Model__ElementsAssignment"
 
 
-    // $ANTLR start "rule__Hashtag__NameAssignment_0_1"
-    // InternalGTDsl.g:927:1: rule__Hashtag__NameAssignment_0_1 : ( RULE_ID ) ;
-    public final void rule__Hashtag__NameAssignment_0_1() throws RecognitionException {
+    // $ANTLR start "rule__Hashtag__NameAssignment_1"
+    // InternalGTDsl.g:920:1: rule__Hashtag__NameAssignment_1 : ( RULE_ID ) ;
+    public final void rule__Hashtag__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGTDsl.g:931:1: ( ( RULE_ID ) )
-            // InternalGTDsl.g:932:2: ( RULE_ID )
+            // InternalGTDsl.g:924:1: ( ( RULE_ID ) )
+            // InternalGTDsl.g:925:2: ( RULE_ID )
             {
-            // InternalGTDsl.g:932:2: ( RULE_ID )
-            // InternalGTDsl.g:933:3: RULE_ID
+            // InternalGTDsl.g:925:2: ( RULE_ID )
+            // InternalGTDsl.g:926:3: RULE_ID
             {
-             before(grammarAccess.getHashtagAccess().getNameIDTerminalRuleCall_0_1_0()); 
+             before(grammarAccess.getHashtagAccess().getNameIDTerminalRuleCall_1_0()); 
             match(input,RULE_ID,FOLLOW_2); 
-             after(grammarAccess.getHashtagAccess().getNameIDTerminalRuleCall_0_1_0()); 
+             after(grammarAccess.getHashtagAccess().getNameIDTerminalRuleCall_1_0()); 
 
             }
 
@@ -2805,35 +2760,35 @@ public class InternalGTDslParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Hashtag__NameAssignment_0_1"
+    // $ANTLR end "rule__Hashtag__NameAssignment_1"
 
 
-    // $ANTLR start "rule__Hashtag__ColorAssignment_0_3"
-    // InternalGTDsl.g:942:1: rule__Hashtag__ColorAssignment_0_3 : ( ( rule__Hashtag__ColorAlternatives_0_3_0 ) ) ;
-    public final void rule__Hashtag__ColorAssignment_0_3() throws RecognitionException {
+    // $ANTLR start "rule__Hashtag__ColorAssignment_3"
+    // InternalGTDsl.g:935:1: rule__Hashtag__ColorAssignment_3 : ( ( rule__Hashtag__ColorAlternatives_3_0 ) ) ;
+    public final void rule__Hashtag__ColorAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGTDsl.g:946:1: ( ( ( rule__Hashtag__ColorAlternatives_0_3_0 ) ) )
-            // InternalGTDsl.g:947:2: ( ( rule__Hashtag__ColorAlternatives_0_3_0 ) )
+            // InternalGTDsl.g:939:1: ( ( ( rule__Hashtag__ColorAlternatives_3_0 ) ) )
+            // InternalGTDsl.g:940:2: ( ( rule__Hashtag__ColorAlternatives_3_0 ) )
             {
-            // InternalGTDsl.g:947:2: ( ( rule__Hashtag__ColorAlternatives_0_3_0 ) )
-            // InternalGTDsl.g:948:3: ( rule__Hashtag__ColorAlternatives_0_3_0 )
+            // InternalGTDsl.g:940:2: ( ( rule__Hashtag__ColorAlternatives_3_0 ) )
+            // InternalGTDsl.g:941:3: ( rule__Hashtag__ColorAlternatives_3_0 )
             {
-             before(grammarAccess.getHashtagAccess().getColorAlternatives_0_3_0()); 
-            // InternalGTDsl.g:949:3: ( rule__Hashtag__ColorAlternatives_0_3_0 )
-            // InternalGTDsl.g:949:4: rule__Hashtag__ColorAlternatives_0_3_0
+             before(grammarAccess.getHashtagAccess().getColorAlternatives_3_0()); 
+            // InternalGTDsl.g:942:3: ( rule__Hashtag__ColorAlternatives_3_0 )
+            // InternalGTDsl.g:942:4: rule__Hashtag__ColorAlternatives_3_0
             {
             pushFollow(FOLLOW_2);
-            rule__Hashtag__ColorAlternatives_0_3_0();
+            rule__Hashtag__ColorAlternatives_3_0();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getHashtagAccess().getColorAlternatives_0_3_0()); 
+             after(grammarAccess.getHashtagAccess().getColorAlternatives_3_0()); 
 
             }
 
@@ -2852,21 +2807,21 @@ public class InternalGTDslParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Hashtag__ColorAssignment_0_3"
+    // $ANTLR end "rule__Hashtag__ColorAssignment_3"
 
 
     // $ANTLR start "rule__HashtagList__NameAssignment_1"
-    // InternalGTDsl.g:957:1: rule__HashtagList__NameAssignment_1 : ( RULE_ID ) ;
+    // InternalGTDsl.g:950:1: rule__HashtagList__NameAssignment_1 : ( RULE_ID ) ;
     public final void rule__HashtagList__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGTDsl.g:961:1: ( ( RULE_ID ) )
-            // InternalGTDsl.g:962:2: ( RULE_ID )
+            // InternalGTDsl.g:954:1: ( ( RULE_ID ) )
+            // InternalGTDsl.g:955:2: ( RULE_ID )
             {
-            // InternalGTDsl.g:962:2: ( RULE_ID )
-            // InternalGTDsl.g:963:3: RULE_ID
+            // InternalGTDsl.g:955:2: ( RULE_ID )
+            // InternalGTDsl.g:956:3: RULE_ID
             {
              before(grammarAccess.getHashtagListAccess().getNameIDTerminalRuleCall_1_0()); 
             match(input,RULE_ID,FOLLOW_2); 
@@ -2893,17 +2848,17 @@ public class InternalGTDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__HashtagList__HashtagAssignment_3_0"
-    // InternalGTDsl.g:972:1: rule__HashtagList__HashtagAssignment_3_0 : ( ruleHashtag ) ;
+    // InternalGTDsl.g:965:1: rule__HashtagList__HashtagAssignment_3_0 : ( ruleHashtag ) ;
     public final void rule__HashtagList__HashtagAssignment_3_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGTDsl.g:976:1: ( ( ruleHashtag ) )
-            // InternalGTDsl.g:977:2: ( ruleHashtag )
+            // InternalGTDsl.g:969:1: ( ( ruleHashtag ) )
+            // InternalGTDsl.g:970:2: ( ruleHashtag )
             {
-            // InternalGTDsl.g:977:2: ( ruleHashtag )
-            // InternalGTDsl.g:978:3: ruleHashtag
+            // InternalGTDsl.g:970:2: ( ruleHashtag )
+            // InternalGTDsl.g:971:3: ruleHashtag
             {
              before(grammarAccess.getHashtagListAccess().getHashtagHashtagParserRuleCall_3_0_0()); 
             pushFollow(FOLLOW_2);
@@ -2933,26 +2888,26 @@ public class InternalGTDslParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__HashtagList__HashtagAssignment_3_0"
 
 
-    // $ANTLR start "rule__HashtagList__HashtagAssignment_3_1"
-    // InternalGTDsl.g:987:1: rule__HashtagList__HashtagAssignment_3_1 : ( ruleHashtag ) ;
-    public final void rule__HashtagList__HashtagAssignment_3_1() throws RecognitionException {
+    // $ANTLR start "rule__HashtagList__HashtagAssignment_3_1_1"
+    // InternalGTDsl.g:980:1: rule__HashtagList__HashtagAssignment_3_1_1 : ( ruleHashtag ) ;
+    public final void rule__HashtagList__HashtagAssignment_3_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGTDsl.g:991:1: ( ( ruleHashtag ) )
-            // InternalGTDsl.g:992:2: ( ruleHashtag )
+            // InternalGTDsl.g:984:1: ( ( ruleHashtag ) )
+            // InternalGTDsl.g:985:2: ( ruleHashtag )
             {
-            // InternalGTDsl.g:992:2: ( ruleHashtag )
-            // InternalGTDsl.g:993:3: ruleHashtag
+            // InternalGTDsl.g:985:2: ( ruleHashtag )
+            // InternalGTDsl.g:986:3: ruleHashtag
             {
-             before(grammarAccess.getHashtagListAccess().getHashtagHashtagParserRuleCall_3_1_0()); 
+             before(grammarAccess.getHashtagListAccess().getHashtagHashtagParserRuleCall_3_1_1_0()); 
             pushFollow(FOLLOW_2);
             ruleHashtag();
 
             state._fsp--;
 
-             after(grammarAccess.getHashtagListAccess().getHashtagHashtagParserRuleCall_3_1_0()); 
+             after(grammarAccess.getHashtagListAccess().getHashtagHashtagParserRuleCall_3_1_1_0()); 
 
             }
 
@@ -2971,21 +2926,21 @@ public class InternalGTDslParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__HashtagList__HashtagAssignment_3_1"
+    // $ANTLR end "rule__HashtagList__HashtagAssignment_3_1_1"
 
 
     // $ANTLR start "rule__Country__NameAssignment_1"
-    // InternalGTDsl.g:1002:1: rule__Country__NameAssignment_1 : ( RULE_ID ) ;
+    // InternalGTDsl.g:995:1: rule__Country__NameAssignment_1 : ( RULE_ID ) ;
     public final void rule__Country__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGTDsl.g:1006:1: ( ( RULE_ID ) )
-            // InternalGTDsl.g:1007:2: ( RULE_ID )
+            // InternalGTDsl.g:999:1: ( ( RULE_ID ) )
+            // InternalGTDsl.g:1000:2: ( RULE_ID )
             {
-            // InternalGTDsl.g:1007:2: ( RULE_ID )
-            // InternalGTDsl.g:1008:3: RULE_ID
+            // InternalGTDsl.g:1000:2: ( RULE_ID )
+            // InternalGTDsl.g:1001:3: RULE_ID
             {
              before(grammarAccess.getCountryAccess().getNameIDTerminalRuleCall_1_0()); 
             match(input,RULE_ID,FOLLOW_2); 
@@ -3012,17 +2967,17 @@ public class InternalGTDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CountryList__NameAssignment_1"
-    // InternalGTDsl.g:1017:1: rule__CountryList__NameAssignment_1 : ( RULE_ID ) ;
+    // InternalGTDsl.g:1010:1: rule__CountryList__NameAssignment_1 : ( RULE_ID ) ;
     public final void rule__CountryList__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGTDsl.g:1021:1: ( ( RULE_ID ) )
-            // InternalGTDsl.g:1022:2: ( RULE_ID )
+            // InternalGTDsl.g:1014:1: ( ( RULE_ID ) )
+            // InternalGTDsl.g:1015:2: ( RULE_ID )
             {
-            // InternalGTDsl.g:1022:2: ( RULE_ID )
-            // InternalGTDsl.g:1023:3: RULE_ID
+            // InternalGTDsl.g:1015:2: ( RULE_ID )
+            // InternalGTDsl.g:1016:3: RULE_ID
             {
              before(grammarAccess.getCountryListAccess().getNameIDTerminalRuleCall_1_0()); 
             match(input,RULE_ID,FOLLOW_2); 
@@ -3049,17 +3004,17 @@ public class InternalGTDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CountryList__CountryAssignment_3_0"
-    // InternalGTDsl.g:1032:1: rule__CountryList__CountryAssignment_3_0 : ( ruleCountry ) ;
+    // InternalGTDsl.g:1025:1: rule__CountryList__CountryAssignment_3_0 : ( ruleCountry ) ;
     public final void rule__CountryList__CountryAssignment_3_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGTDsl.g:1036:1: ( ( ruleCountry ) )
-            // InternalGTDsl.g:1037:2: ( ruleCountry )
+            // InternalGTDsl.g:1029:1: ( ( ruleCountry ) )
+            // InternalGTDsl.g:1030:2: ( ruleCountry )
             {
-            // InternalGTDsl.g:1037:2: ( ruleCountry )
-            // InternalGTDsl.g:1038:3: ruleCountry
+            // InternalGTDsl.g:1030:2: ( ruleCountry )
+            // InternalGTDsl.g:1031:3: ruleCountry
             {
              before(grammarAccess.getCountryListAccess().getCountryCountryParserRuleCall_3_0_0()); 
             pushFollow(FOLLOW_2);
@@ -3090,17 +3045,17 @@ public class InternalGTDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CountryList__CountryAssignment_3_1_1"
-    // InternalGTDsl.g:1047:1: rule__CountryList__CountryAssignment_3_1_1 : ( ruleCountry ) ;
+    // InternalGTDsl.g:1040:1: rule__CountryList__CountryAssignment_3_1_1 : ( ruleCountry ) ;
     public final void rule__CountryList__CountryAssignment_3_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGTDsl.g:1051:1: ( ( ruleCountry ) )
-            // InternalGTDsl.g:1052:2: ( ruleCountry )
+            // InternalGTDsl.g:1044:1: ( ( ruleCountry ) )
+            // InternalGTDsl.g:1045:2: ( ruleCountry )
             {
-            // InternalGTDsl.g:1052:2: ( ruleCountry )
-            // InternalGTDsl.g:1053:3: ruleCountry
+            // InternalGTDsl.g:1045:2: ( ruleCountry )
+            // InternalGTDsl.g:1046:3: ruleCountry
             {
              before(grammarAccess.getCountryListAccess().getCountryCountryParserRuleCall_3_1_1_0()); 
             pushFollow(FOLLOW_2);
@@ -3136,18 +3091,15 @@ public class InternalGTDslParser extends AbstractInternalContentAssistParser {
 
     public static final BitSet FOLLOW_1 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_2 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_3 = new BitSet(new long[]{0x0000000000220002L});
+    public static final BitSet FOLLOW_3 = new BitSet(new long[]{0x0000000000420002L});
     public static final BitSet FOLLOW_4 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_5 = new BitSet(new long[]{0x0000000000000012L});
-    public static final BitSet FOLLOW_6 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_7 = new BitSet(new long[]{0x0000000000010000L});
-    public static final BitSet FOLLOW_8 = new BitSet(new long[]{0x0000000000007000L});
-    public static final BitSet FOLLOW_9 = new BitSet(new long[]{0x0000000000040000L});
-    public static final BitSet FOLLOW_10 = new BitSet(new long[]{0x0000000000008000L});
-    public static final BitSet FOLLOW_11 = new BitSet(new long[]{0x0000000000080000L});
-    public static final BitSet FOLLOW_12 = new BitSet(new long[]{0x0000000000008002L});
-    public static final BitSet FOLLOW_13 = new BitSet(new long[]{0x0000000000100000L});
-    public static final BitSet FOLLOW_14 = new BitSet(new long[]{0x0000000000400000L});
-    public static final BitSet FOLLOW_15 = new BitSet(new long[]{0x0000000000400002L});
+    public static final BitSet FOLLOW_5 = new BitSet(new long[]{0x0000000000010000L});
+    public static final BitSet FOLLOW_6 = new BitSet(new long[]{0x0000000000007000L});
+    public static final BitSet FOLLOW_7 = new BitSet(new long[]{0x0000000000040000L});
+    public static final BitSet FOLLOW_8 = new BitSet(new long[]{0x0000000000008000L});
+    public static final BitSet FOLLOW_9 = new BitSet(new long[]{0x0000000000080000L});
+    public static final BitSet FOLLOW_10 = new BitSet(new long[]{0x0000000000100000L});
+    public static final BitSet FOLLOW_11 = new BitSet(new long[]{0x0000000000100002L});
+    public static final BitSet FOLLOW_12 = new BitSet(new long[]{0x0000000000200000L});
 
 }

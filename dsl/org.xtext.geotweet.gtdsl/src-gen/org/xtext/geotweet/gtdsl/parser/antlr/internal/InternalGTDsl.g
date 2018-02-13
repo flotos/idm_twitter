@@ -148,78 +148,70 @@ ruleHashtag returns [EObject current=null]
 	leaveRule();
 }:
 	(
+		otherlv_0='#'
+		{
+			newLeafNode(otherlv_0, grammarAccess.getHashtagAccess().getNumberSignKeyword_0());
+		}
 		(
-			otherlv_0='#'
-			{
-				newLeafNode(otherlv_0, grammarAccess.getHashtagAccess().getNumberSignKeyword_0_0());
-			}
+			(
+				lv_name_1_0=RULE_ID
+				{
+					newLeafNode(lv_name_1_0, grammarAccess.getHashtagAccess().getNameIDTerminalRuleCall_1_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getHashtagRule());
+					}
+					setWithLastConsumed(
+						$current,
+						"name",
+						lv_name_1_0,
+						"org.eclipse.xtext.common.Terminals.ID");
+				}
+			)
+		)
+		otherlv_2=':'
+		{
+			newLeafNode(otherlv_2, grammarAccess.getHashtagAccess().getColonKeyword_2());
+		}
+		(
 			(
 				(
-					lv_name_1_0=RULE_ID
+					lv_color_3_1='red'
 					{
-						newLeafNode(lv_name_1_0, grammarAccess.getHashtagAccess().getNameIDTerminalRuleCall_0_1_0());
+						newLeafNode(lv_color_3_1, grammarAccess.getHashtagAccess().getColorRedKeyword_3_0_0());
 					}
 					{
 						if ($current==null) {
 							$current = createModelElement(grammarAccess.getHashtagRule());
 						}
-						setWithLastConsumed(
-							$current,
-							"name",
-							lv_name_1_0,
-							"org.eclipse.xtext.common.Terminals.ID");
+						setWithLastConsumed($current, "color", lv_color_3_1, null);
+					}
+					    |
+					lv_color_3_2='blue'
+					{
+						newLeafNode(lv_color_3_2, grammarAccess.getHashtagAccess().getColorBlueKeyword_3_0_1());
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getHashtagRule());
+						}
+						setWithLastConsumed($current, "color", lv_color_3_2, null);
+					}
+					    |
+					lv_color_3_3='green'
+					{
+						newLeafNode(lv_color_3_3, grammarAccess.getHashtagAccess().getColorGreenKeyword_3_0_2());
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getHashtagRule());
+						}
+						setWithLastConsumed($current, "color", lv_color_3_3, null);
 					}
 				)
 			)
-			otherlv_2=':'
-			{
-				newLeafNode(otherlv_2, grammarAccess.getHashtagAccess().getColonKeyword_0_2());
-			}
-			(
-				(
-					(
-						lv_color_3_1='red'
-						{
-							newLeafNode(lv_color_3_1, grammarAccess.getHashtagAccess().getColorRedKeyword_0_3_0_0());
-						}
-						{
-							if ($current==null) {
-								$current = createModelElement(grammarAccess.getHashtagRule());
-							}
-							setWithLastConsumed($current, "color", lv_color_3_1, null);
-						}
-						    |
-						lv_color_3_2='blue'
-						{
-							newLeafNode(lv_color_3_2, grammarAccess.getHashtagAccess().getColorBlueKeyword_0_3_0_1());
-						}
-						{
-							if ($current==null) {
-								$current = createModelElement(grammarAccess.getHashtagRule());
-							}
-							setWithLastConsumed($current, "color", lv_color_3_2, null);
-						}
-						    |
-						lv_color_3_3='green'
-						{
-							newLeafNode(lv_color_3_3, grammarAccess.getHashtagAccess().getColorGreenKeyword_0_3_0_2());
-						}
-						{
-							if ($current==null) {
-								$current = createModelElement(grammarAccess.getHashtagRule());
-							}
-							setWithLastConsumed($current, "color", lv_color_3_3, null);
-						}
-					)
-				)
-			)
 		)
-		(
-			this_NEWLINE_4=RULE_NEWLINE
-			{
-				newLeafNode(this_NEWLINE_4, grammarAccess.getHashtagAccess().getNEWLINETerminalRuleCall_1());
-			}
-		)+
 	)
 ;
 
@@ -286,28 +278,34 @@ ruleHashtagList returns [EObject current=null]
 				)
 			)
 			(
+				otherlv_4=','
+				{
+					newLeafNode(otherlv_4, grammarAccess.getHashtagListAccess().getCommaKeyword_3_1_0());
+				}
 				(
-					{
-						newCompositeNode(grammarAccess.getHashtagListAccess().getHashtagHashtagParserRuleCall_3_1_0());
-					}
-					lv_hashtag_4_0=ruleHashtag
-					{
-						if ($current==null) {
-							$current = createModelElementForParent(grammarAccess.getHashtagListRule());
+					(
+						{
+							newCompositeNode(grammarAccess.getHashtagListAccess().getHashtagHashtagParserRuleCall_3_1_1_0());
 						}
-						add(
-							$current,
-							"hashtag",
-							lv_hashtag_4_0,
-							"org.xtext.geotweet.gtdsl.GTDsl.Hashtag");
-						afterParserOrEnumRuleCall();
-					}
+						lv_hashtag_5_0=ruleHashtag
+						{
+							if ($current==null) {
+								$current = createModelElementForParent(grammarAccess.getHashtagListRule());
+							}
+							add(
+								$current,
+								"hashtag",
+								lv_hashtag_5_0,
+								"org.xtext.geotweet.gtdsl.GTDsl.Hashtag");
+							afterParserOrEnumRuleCall();
+						}
+					)
 				)
 			)+
 		)
-		otherlv_5=']'
+		otherlv_6=']'
 		{
-			newLeafNode(otherlv_5, grammarAccess.getHashtagListAccess().getRightSquareBracketKeyword_4());
+			newLeafNode(otherlv_6, grammarAccess.getHashtagListAccess().getRightSquareBracketKeyword_4());
 		}
 	)
 ;

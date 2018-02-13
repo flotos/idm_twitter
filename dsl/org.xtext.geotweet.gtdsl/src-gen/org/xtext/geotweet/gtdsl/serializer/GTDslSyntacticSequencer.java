@@ -10,8 +10,6 @@ import org.eclipse.xtext.IGrammarAccess;
 import org.eclipse.xtext.RuleCall;
 import org.eclipse.xtext.nodemodel.INode;
 import org.eclipse.xtext.serializer.analysis.GrammarAlias.AbstractElementAlias;
-import org.eclipse.xtext.serializer.analysis.GrammarAlias.TokenAlias;
-import org.eclipse.xtext.serializer.analysis.ISyntacticSequencerPDAProvider.ISynNavigable;
 import org.eclipse.xtext.serializer.analysis.ISyntacticSequencerPDAProvider.ISynTransition;
 import org.eclipse.xtext.serializer.sequencer.AbstractSyntacticSequencer;
 import org.xtext.geotweet.gtdsl.services.GTDslGrammarAccess;
@@ -20,29 +18,17 @@ import org.xtext.geotweet.gtdsl.services.GTDslGrammarAccess;
 public class GTDslSyntacticSequencer extends AbstractSyntacticSequencer {
 
 	protected GTDslGrammarAccess grammarAccess;
-	protected AbstractElementAlias match_Hashtag_NEWLINETerminalRuleCall_1_p;
 	
 	@Inject
 	protected void init(IGrammarAccess access) {
 		grammarAccess = (GTDslGrammarAccess) access;
-		match_Hashtag_NEWLINETerminalRuleCall_1_p = new TokenAlias(true, false, grammarAccess.getHashtagAccess().getNEWLINETerminalRuleCall_1());
 	}
 	
 	@Override
 	protected String getUnassignedRuleCallToken(EObject semanticObject, RuleCall ruleCall, INode node) {
-		if (ruleCall.getRule() == grammarAccess.getNEWLINERule())
-			return getNEWLINEToken(semanticObject, ruleCall, node);
 		return "";
 	}
 	
-	/**
-	 * terminal NEWLINE: ('\r'? '\n');
-	 */
-	protected String getNEWLINEToken(EObject semanticObject, RuleCall ruleCall, INode node) {
-		if (node != null)
-			return getTokenText(node);
-		return "\n";
-	}
 	
 	@Override
 	protected void emitUnassignedTokens(EObject semanticObject, ISynTransition transition, INode fromNode, INode toNode) {
@@ -50,23 +36,8 @@ public class GTDslSyntacticSequencer extends AbstractSyntacticSequencer {
 		List<INode> transitionNodes = collectNodes(fromNode, toNode);
 		for (AbstractElementAlias syntax : transition.getAmbiguousSyntaxes()) {
 			List<INode> syntaxNodes = getNodesFor(transitionNodes, syntax);
-			if (match_Hashtag_NEWLINETerminalRuleCall_1_p.equals(syntax))
-				emit_Hashtag_NEWLINETerminalRuleCall_1_p(semanticObject, getLastNavigableState(), syntaxNodes);
-			else acceptNodes(getLastNavigableState(), syntaxNodes);
+			acceptNodes(getLastNavigableState(), syntaxNodes);
 		}
 	}
 
-	/**
-	 * Ambiguous syntax:
-	 *     NEWLINE+
-	 *
-	 * This ambiguous syntax occurs at:
-	 *     color='blue' (ambiguity) (rule end)
-	 *     color='green' (ambiguity) (rule end)
-	 *     color='red' (ambiguity) (rule end)
-	 */
-	protected void emit_Hashtag_NEWLINETerminalRuleCall_1_p(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
-		acceptNodes(transition, nodes);
-	}
-	
 }

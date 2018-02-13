@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<introContent>
+  	<extensionContent id="frinriaaostetimesquarewizard-introExtension" style="css/sample.css" name="Sample Extension" path="overview/@">
+		<group style-id="content-group" id="frinriaaostetimesquarewizard-introLink-group" label="TimeSquare">
+       		<text>TimeSquare </text>
+			<link
+				url="http://org.eclipse.ui.intro/runAction?pluginId=fr.inria.aoste.timesquare.wizard&amp;class=fr.inria.aoste.timesquare.wizard.action.DemoAction&amp;paramwizard=prj"
+				label="Project CCSL" style-id="content-link" id="frinriaaostetimesquarewizard-introLink" filteredForm="swt">
+				<text>Project of CCSL 	
+			</text>
+			</link>
+				<group id="file-news" label="CCSL File" expandable="true" expanded="true"> 
+	 		<contentProvider id="" pluginId="fr.inria.aoste.timesquare.wizard" class="fr.inria.aoste.timesquare.wizard.content.TimesquareViewer">
+				</contentProvider>
+		
+			 </group>
+		</group>
+  	</extensionContent>
+</introContent>
+
+ 

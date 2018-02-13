@@ -21,7 +21,7 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalGTDslParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_NEWLINE", "RULE_INT", "RULE_STRING", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'#'", "':'", "'red'", "'blue'", "'green'", "'tags'", "'['", "']'", "'country'", "'countries'", "','"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_NEWLINE", "RULE_INT", "RULE_STRING", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'#'", "':'", "'red'", "'blue'", "'green'", "'tags'", "'['", "','", "']'", "'country'", "'countries'"
     };
     public static final int RULE_NEWLINE=5;
     public static final int RULE_STRING=7;
@@ -140,7 +140,7 @@ public class InternalGTDslParser extends AbstractInternalAntlrParser {
                 int alt1=2;
                 int LA1_0 = input.LA(1);
 
-                if ( (LA1_0==17||LA1_0==21) ) {
+                if ( (LA1_0==17||LA1_0==22) ) {
                     alt1=1;
                 }
 
@@ -262,7 +262,7 @@ public class InternalGTDslParser extends AbstractInternalAntlrParser {
             if ( (LA2_0==17) ) {
                 alt2=1;
             }
-            else if ( (LA2_0==21) ) {
+            else if ( (LA2_0==22) ) {
                 alt2=2;
             }
             else {
@@ -367,7 +367,7 @@ public class InternalGTDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleHashtag"
-    // InternalGTDsl.g:143:1: ruleHashtag returns [EObject current=null] : ( (otherlv_0= '#' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= ':' ( ( (lv_color_3_1= 'red' | lv_color_3_2= 'blue' | lv_color_3_3= 'green' ) ) ) ) (this_NEWLINE_4= RULE_NEWLINE )+ ) ;
+    // InternalGTDsl.g:143:1: ruleHashtag returns [EObject current=null] : (otherlv_0= '#' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= ':' ( ( (lv_color_3_1= 'red' | lv_color_3_2= 'blue' | lv_color_3_3= 'green' ) ) ) ) ;
     public final EObject ruleHashtag() throws RecognitionException {
         EObject current = null;
 
@@ -377,45 +377,41 @@ public class InternalGTDslParser extends AbstractInternalAntlrParser {
         Token lv_color_3_1=null;
         Token lv_color_3_2=null;
         Token lv_color_3_3=null;
-        Token this_NEWLINE_4=null;
 
 
         	enterRule();
 
         try {
-            // InternalGTDsl.g:149:2: ( ( (otherlv_0= '#' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= ':' ( ( (lv_color_3_1= 'red' | lv_color_3_2= 'blue' | lv_color_3_3= 'green' ) ) ) ) (this_NEWLINE_4= RULE_NEWLINE )+ ) )
-            // InternalGTDsl.g:150:2: ( (otherlv_0= '#' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= ':' ( ( (lv_color_3_1= 'red' | lv_color_3_2= 'blue' | lv_color_3_3= 'green' ) ) ) ) (this_NEWLINE_4= RULE_NEWLINE )+ )
+            // InternalGTDsl.g:149:2: ( (otherlv_0= '#' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= ':' ( ( (lv_color_3_1= 'red' | lv_color_3_2= 'blue' | lv_color_3_3= 'green' ) ) ) ) )
+            // InternalGTDsl.g:150:2: (otherlv_0= '#' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= ':' ( ( (lv_color_3_1= 'red' | lv_color_3_2= 'blue' | lv_color_3_3= 'green' ) ) ) )
             {
-            // InternalGTDsl.g:150:2: ( (otherlv_0= '#' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= ':' ( ( (lv_color_3_1= 'red' | lv_color_3_2= 'blue' | lv_color_3_3= 'green' ) ) ) ) (this_NEWLINE_4= RULE_NEWLINE )+ )
-            // InternalGTDsl.g:151:3: (otherlv_0= '#' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= ':' ( ( (lv_color_3_1= 'red' | lv_color_3_2= 'blue' | lv_color_3_3= 'green' ) ) ) ) (this_NEWLINE_4= RULE_NEWLINE )+
-            {
-            // InternalGTDsl.g:151:3: (otherlv_0= '#' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= ':' ( ( (lv_color_3_1= 'red' | lv_color_3_2= 'blue' | lv_color_3_3= 'green' ) ) ) )
-            // InternalGTDsl.g:152:4: otherlv_0= '#' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= ':' ( ( (lv_color_3_1= 'red' | lv_color_3_2= 'blue' | lv_color_3_3= 'green' ) ) )
+            // InternalGTDsl.g:150:2: (otherlv_0= '#' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= ':' ( ( (lv_color_3_1= 'red' | lv_color_3_2= 'blue' | lv_color_3_3= 'green' ) ) ) )
+            // InternalGTDsl.g:151:3: otherlv_0= '#' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= ':' ( ( (lv_color_3_1= 'red' | lv_color_3_2= 'blue' | lv_color_3_3= 'green' ) ) )
             {
             otherlv_0=(Token)match(input,12,FOLLOW_4); 
 
-            				newLeafNode(otherlv_0, grammarAccess.getHashtagAccess().getNumberSignKeyword_0_0());
-            			
-            // InternalGTDsl.g:156:4: ( (lv_name_1_0= RULE_ID ) )
-            // InternalGTDsl.g:157:5: (lv_name_1_0= RULE_ID )
+            			newLeafNode(otherlv_0, grammarAccess.getHashtagAccess().getNumberSignKeyword_0());
+            		
+            // InternalGTDsl.g:155:3: ( (lv_name_1_0= RULE_ID ) )
+            // InternalGTDsl.g:156:4: (lv_name_1_0= RULE_ID )
             {
-            // InternalGTDsl.g:157:5: (lv_name_1_0= RULE_ID )
-            // InternalGTDsl.g:158:6: lv_name_1_0= RULE_ID
+            // InternalGTDsl.g:156:4: (lv_name_1_0= RULE_ID )
+            // InternalGTDsl.g:157:5: lv_name_1_0= RULE_ID
             {
             lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_5); 
 
-            						newLeafNode(lv_name_1_0, grammarAccess.getHashtagAccess().getNameIDTerminalRuleCall_0_1_0());
-            					
+            					newLeafNode(lv_name_1_0, grammarAccess.getHashtagAccess().getNameIDTerminalRuleCall_1_0());
+            				
 
-            						if (current==null) {
-            							current = createModelElement(grammarAccess.getHashtagRule());
-            						}
-            						setWithLastConsumed(
-            							current,
-            							"name",
-            							lv_name_1_0,
-            							"org.eclipse.xtext.common.Terminals.ID");
-            					
+            					if (current==null) {
+            						current = createModelElement(grammarAccess.getHashtagRule());
+            					}
+            					setWithLastConsumed(
+            						current,
+            						"name",
+            						lv_name_1_0,
+            						"org.eclipse.xtext.common.Terminals.ID");
+            				
 
             }
 
@@ -424,15 +420,15 @@ public class InternalGTDslParser extends AbstractInternalAntlrParser {
 
             otherlv_2=(Token)match(input,13,FOLLOW_6); 
 
-            				newLeafNode(otherlv_2, grammarAccess.getHashtagAccess().getColonKeyword_0_2());
-            			
-            // InternalGTDsl.g:178:4: ( ( (lv_color_3_1= 'red' | lv_color_3_2= 'blue' | lv_color_3_3= 'green' ) ) )
-            // InternalGTDsl.g:179:5: ( (lv_color_3_1= 'red' | lv_color_3_2= 'blue' | lv_color_3_3= 'green' ) )
+            			newLeafNode(otherlv_2, grammarAccess.getHashtagAccess().getColonKeyword_2());
+            		
+            // InternalGTDsl.g:177:3: ( ( (lv_color_3_1= 'red' | lv_color_3_2= 'blue' | lv_color_3_3= 'green' ) ) )
+            // InternalGTDsl.g:178:4: ( (lv_color_3_1= 'red' | lv_color_3_2= 'blue' | lv_color_3_3= 'green' ) )
             {
-            // InternalGTDsl.g:179:5: ( (lv_color_3_1= 'red' | lv_color_3_2= 'blue' | lv_color_3_3= 'green' ) )
-            // InternalGTDsl.g:180:6: (lv_color_3_1= 'red' | lv_color_3_2= 'blue' | lv_color_3_3= 'green' )
+            // InternalGTDsl.g:178:4: ( (lv_color_3_1= 'red' | lv_color_3_2= 'blue' | lv_color_3_3= 'green' ) )
+            // InternalGTDsl.g:179:5: (lv_color_3_1= 'red' | lv_color_3_2= 'blue' | lv_color_3_3= 'green' )
             {
-            // InternalGTDsl.g:180:6: (lv_color_3_1= 'red' | lv_color_3_2= 'blue' | lv_color_3_3= 'green' )
+            // InternalGTDsl.g:179:5: (lv_color_3_1= 'red' | lv_color_3_2= 'blue' | lv_color_3_3= 'green' )
             int alt3=3;
             switch ( input.LA(1) ) {
             case 14:
@@ -459,50 +455,50 @@ public class InternalGTDslParser extends AbstractInternalAntlrParser {
 
             switch (alt3) {
                 case 1 :
-                    // InternalGTDsl.g:181:7: lv_color_3_1= 'red'
+                    // InternalGTDsl.g:180:6: lv_color_3_1= 'red'
                     {
-                    lv_color_3_1=(Token)match(input,14,FOLLOW_7); 
+                    lv_color_3_1=(Token)match(input,14,FOLLOW_2); 
 
-                    							newLeafNode(lv_color_3_1, grammarAccess.getHashtagAccess().getColorRedKeyword_0_3_0_0());
-                    						
+                    						newLeafNode(lv_color_3_1, grammarAccess.getHashtagAccess().getColorRedKeyword_3_0_0());
+                    					
 
-                    							if (current==null) {
-                    								current = createModelElement(grammarAccess.getHashtagRule());
-                    							}
-                    							setWithLastConsumed(current, "color", lv_color_3_1, null);
-                    						
+                    						if (current==null) {
+                    							current = createModelElement(grammarAccess.getHashtagRule());
+                    						}
+                    						setWithLastConsumed(current, "color", lv_color_3_1, null);
+                    					
 
                     }
                     break;
                 case 2 :
-                    // InternalGTDsl.g:192:7: lv_color_3_2= 'blue'
+                    // InternalGTDsl.g:191:6: lv_color_3_2= 'blue'
                     {
-                    lv_color_3_2=(Token)match(input,15,FOLLOW_7); 
+                    lv_color_3_2=(Token)match(input,15,FOLLOW_2); 
 
-                    							newLeafNode(lv_color_3_2, grammarAccess.getHashtagAccess().getColorBlueKeyword_0_3_0_1());
-                    						
+                    						newLeafNode(lv_color_3_2, grammarAccess.getHashtagAccess().getColorBlueKeyword_3_0_1());
+                    					
 
-                    							if (current==null) {
-                    								current = createModelElement(grammarAccess.getHashtagRule());
-                    							}
-                    							setWithLastConsumed(current, "color", lv_color_3_2, null);
-                    						
+                    						if (current==null) {
+                    							current = createModelElement(grammarAccess.getHashtagRule());
+                    						}
+                    						setWithLastConsumed(current, "color", lv_color_3_2, null);
+                    					
 
                     }
                     break;
                 case 3 :
-                    // InternalGTDsl.g:203:7: lv_color_3_3= 'green'
+                    // InternalGTDsl.g:202:6: lv_color_3_3= 'green'
                     {
-                    lv_color_3_3=(Token)match(input,16,FOLLOW_7); 
+                    lv_color_3_3=(Token)match(input,16,FOLLOW_2); 
 
-                    							newLeafNode(lv_color_3_3, grammarAccess.getHashtagAccess().getColorGreenKeyword_0_3_0_2());
-                    						
+                    						newLeafNode(lv_color_3_3, grammarAccess.getHashtagAccess().getColorGreenKeyword_3_0_2());
+                    					
 
-                    							if (current==null) {
-                    								current = createModelElement(grammarAccess.getHashtagRule());
-                    							}
-                    							setWithLastConsumed(current, "color", lv_color_3_3, null);
-                    						
+                    						if (current==null) {
+                    							current = createModelElement(grammarAccess.getHashtagRule());
+                    						}
+                    						setWithLastConsumed(current, "color", lv_color_3_3, null);
+                    					
 
                     }
                     break;
@@ -514,42 +510,6 @@ public class InternalGTDslParser extends AbstractInternalAntlrParser {
 
 
             }
-
-
-            }
-
-            // InternalGTDsl.g:217:3: (this_NEWLINE_4= RULE_NEWLINE )+
-            int cnt4=0;
-            loop4:
-            do {
-                int alt4=2;
-                int LA4_0 = input.LA(1);
-
-                if ( (LA4_0==RULE_NEWLINE) ) {
-                    alt4=1;
-                }
-
-
-                switch (alt4) {
-            	case 1 :
-            	    // InternalGTDsl.g:218:4: this_NEWLINE_4= RULE_NEWLINE
-            	    {
-            	    this_NEWLINE_4=(Token)match(input,RULE_NEWLINE,FOLLOW_8); 
-
-            	    				newLeafNode(this_NEWLINE_4, grammarAccess.getHashtagAccess().getNEWLINETerminalRuleCall_1());
-            	    			
-
-            	    }
-            	    break;
-
-            	default :
-            	    if ( cnt4 >= 1 ) break loop4;
-                        EarlyExitException eee =
-                            new EarlyExitException(4, input);
-                        throw eee;
-                }
-                cnt4++;
-            } while (true);
 
 
             }
@@ -574,7 +534,7 @@ public class InternalGTDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleHashtagList"
-    // InternalGTDsl.g:227:1: entryRuleHashtagList returns [EObject current=null] : iv_ruleHashtagList= ruleHashtagList EOF ;
+    // InternalGTDsl.g:219:1: entryRuleHashtagList returns [EObject current=null] : iv_ruleHashtagList= ruleHashtagList EOF ;
     public final EObject entryRuleHashtagList() throws RecognitionException {
         EObject current = null;
 
@@ -582,8 +542,8 @@ public class InternalGTDslParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalGTDsl.g:227:52: (iv_ruleHashtagList= ruleHashtagList EOF )
-            // InternalGTDsl.g:228:2: iv_ruleHashtagList= ruleHashtagList EOF
+            // InternalGTDsl.g:219:52: (iv_ruleHashtagList= ruleHashtagList EOF )
+            // InternalGTDsl.g:220:2: iv_ruleHashtagList= ruleHashtagList EOF
             {
              newCompositeNode(grammarAccess.getHashtagListRule()); 
             pushFollow(FOLLOW_1);
@@ -610,40 +570,41 @@ public class InternalGTDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleHashtagList"
-    // InternalGTDsl.g:234:1: ruleHashtagList returns [EObject current=null] : (otherlv_0= 'tags' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '[' ( ( (lv_hashtag_3_0= ruleHashtag ) ) ( (lv_hashtag_4_0= ruleHashtag ) )+ ) otherlv_5= ']' ) ;
+    // InternalGTDsl.g:226:1: ruleHashtagList returns [EObject current=null] : (otherlv_0= 'tags' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '[' ( ( (lv_hashtag_3_0= ruleHashtag ) ) (otherlv_4= ',' ( (lv_hashtag_5_0= ruleHashtag ) ) )+ ) otherlv_6= ']' ) ;
     public final EObject ruleHashtagList() throws RecognitionException {
         EObject current = null;
 
         Token otherlv_0=null;
         Token lv_name_1_0=null;
         Token otherlv_2=null;
-        Token otherlv_5=null;
+        Token otherlv_4=null;
+        Token otherlv_6=null;
         EObject lv_hashtag_3_0 = null;
 
-        EObject lv_hashtag_4_0 = null;
+        EObject lv_hashtag_5_0 = null;
 
 
 
         	enterRule();
 
         try {
-            // InternalGTDsl.g:240:2: ( (otherlv_0= 'tags' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '[' ( ( (lv_hashtag_3_0= ruleHashtag ) ) ( (lv_hashtag_4_0= ruleHashtag ) )+ ) otherlv_5= ']' ) )
-            // InternalGTDsl.g:241:2: (otherlv_0= 'tags' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '[' ( ( (lv_hashtag_3_0= ruleHashtag ) ) ( (lv_hashtag_4_0= ruleHashtag ) )+ ) otherlv_5= ']' )
+            // InternalGTDsl.g:232:2: ( (otherlv_0= 'tags' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '[' ( ( (lv_hashtag_3_0= ruleHashtag ) ) (otherlv_4= ',' ( (lv_hashtag_5_0= ruleHashtag ) ) )+ ) otherlv_6= ']' ) )
+            // InternalGTDsl.g:233:2: (otherlv_0= 'tags' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '[' ( ( (lv_hashtag_3_0= ruleHashtag ) ) (otherlv_4= ',' ( (lv_hashtag_5_0= ruleHashtag ) ) )+ ) otherlv_6= ']' )
             {
-            // InternalGTDsl.g:241:2: (otherlv_0= 'tags' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '[' ( ( (lv_hashtag_3_0= ruleHashtag ) ) ( (lv_hashtag_4_0= ruleHashtag ) )+ ) otherlv_5= ']' )
-            // InternalGTDsl.g:242:3: otherlv_0= 'tags' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '[' ( ( (lv_hashtag_3_0= ruleHashtag ) ) ( (lv_hashtag_4_0= ruleHashtag ) )+ ) otherlv_5= ']'
+            // InternalGTDsl.g:233:2: (otherlv_0= 'tags' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '[' ( ( (lv_hashtag_3_0= ruleHashtag ) ) (otherlv_4= ',' ( (lv_hashtag_5_0= ruleHashtag ) ) )+ ) otherlv_6= ']' )
+            // InternalGTDsl.g:234:3: otherlv_0= 'tags' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '[' ( ( (lv_hashtag_3_0= ruleHashtag ) ) (otherlv_4= ',' ( (lv_hashtag_5_0= ruleHashtag ) ) )+ ) otherlv_6= ']'
             {
             otherlv_0=(Token)match(input,17,FOLLOW_4); 
 
             			newLeafNode(otherlv_0, grammarAccess.getHashtagListAccess().getTagsKeyword_0());
             		
-            // InternalGTDsl.g:246:3: ( (lv_name_1_0= RULE_ID ) )
-            // InternalGTDsl.g:247:4: (lv_name_1_0= RULE_ID )
+            // InternalGTDsl.g:238:3: ( (lv_name_1_0= RULE_ID ) )
+            // InternalGTDsl.g:239:4: (lv_name_1_0= RULE_ID )
             {
-            // InternalGTDsl.g:247:4: (lv_name_1_0= RULE_ID )
-            // InternalGTDsl.g:248:5: lv_name_1_0= RULE_ID
+            // InternalGTDsl.g:239:4: (lv_name_1_0= RULE_ID )
+            // InternalGTDsl.g:240:5: lv_name_1_0= RULE_ID
             {
-            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_9); 
+            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_7); 
 
             					newLeafNode(lv_name_1_0, grammarAccess.getHashtagListAccess().getNameIDTerminalRuleCall_1_0());
             				
@@ -663,23 +624,23 @@ public class InternalGTDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_2=(Token)match(input,18,FOLLOW_10); 
+            otherlv_2=(Token)match(input,18,FOLLOW_8); 
 
             			newLeafNode(otherlv_2, grammarAccess.getHashtagListAccess().getLeftSquareBracketKeyword_2());
             		
-            // InternalGTDsl.g:268:3: ( ( (lv_hashtag_3_0= ruleHashtag ) ) ( (lv_hashtag_4_0= ruleHashtag ) )+ )
-            // InternalGTDsl.g:269:4: ( (lv_hashtag_3_0= ruleHashtag ) ) ( (lv_hashtag_4_0= ruleHashtag ) )+
+            // InternalGTDsl.g:260:3: ( ( (lv_hashtag_3_0= ruleHashtag ) ) (otherlv_4= ',' ( (lv_hashtag_5_0= ruleHashtag ) ) )+ )
+            // InternalGTDsl.g:261:4: ( (lv_hashtag_3_0= ruleHashtag ) ) (otherlv_4= ',' ( (lv_hashtag_5_0= ruleHashtag ) ) )+
             {
-            // InternalGTDsl.g:269:4: ( (lv_hashtag_3_0= ruleHashtag ) )
-            // InternalGTDsl.g:270:5: (lv_hashtag_3_0= ruleHashtag )
+            // InternalGTDsl.g:261:4: ( (lv_hashtag_3_0= ruleHashtag ) )
+            // InternalGTDsl.g:262:5: (lv_hashtag_3_0= ruleHashtag )
             {
-            // InternalGTDsl.g:270:5: (lv_hashtag_3_0= ruleHashtag )
-            // InternalGTDsl.g:271:6: lv_hashtag_3_0= ruleHashtag
+            // InternalGTDsl.g:262:5: (lv_hashtag_3_0= ruleHashtag )
+            // InternalGTDsl.g:263:6: lv_hashtag_3_0= ruleHashtag
             {
 
             						newCompositeNode(grammarAccess.getHashtagListAccess().getHashtagHashtagParserRuleCall_3_0_0());
             					
-            pushFollow(FOLLOW_10);
+            pushFollow(FOLLOW_9);
             lv_hashtag_3_0=ruleHashtag();
 
             state._fsp--;
@@ -701,44 +662,54 @@ public class InternalGTDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalGTDsl.g:288:4: ( (lv_hashtag_4_0= ruleHashtag ) )+
-            int cnt5=0;
-            loop5:
+            // InternalGTDsl.g:280:4: (otherlv_4= ',' ( (lv_hashtag_5_0= ruleHashtag ) ) )+
+            int cnt4=0;
+            loop4:
             do {
-                int alt5=2;
-                int LA5_0 = input.LA(1);
+                int alt4=2;
+                int LA4_0 = input.LA(1);
 
-                if ( (LA5_0==12) ) {
-                    alt5=1;
+                if ( (LA4_0==19) ) {
+                    alt4=1;
                 }
 
 
-                switch (alt5) {
+                switch (alt4) {
             	case 1 :
-            	    // InternalGTDsl.g:289:5: (lv_hashtag_4_0= ruleHashtag )
+            	    // InternalGTDsl.g:281:5: otherlv_4= ',' ( (lv_hashtag_5_0= ruleHashtag ) )
             	    {
-            	    // InternalGTDsl.g:289:5: (lv_hashtag_4_0= ruleHashtag )
-            	    // InternalGTDsl.g:290:6: lv_hashtag_4_0= ruleHashtag
+            	    otherlv_4=(Token)match(input,19,FOLLOW_8); 
+
+            	    					newLeafNode(otherlv_4, grammarAccess.getHashtagListAccess().getCommaKeyword_3_1_0());
+            	    				
+            	    // InternalGTDsl.g:285:5: ( (lv_hashtag_5_0= ruleHashtag ) )
+            	    // InternalGTDsl.g:286:6: (lv_hashtag_5_0= ruleHashtag )
+            	    {
+            	    // InternalGTDsl.g:286:6: (lv_hashtag_5_0= ruleHashtag )
+            	    // InternalGTDsl.g:287:7: lv_hashtag_5_0= ruleHashtag
             	    {
 
-            	    						newCompositeNode(grammarAccess.getHashtagListAccess().getHashtagHashtagParserRuleCall_3_1_0());
-            	    					
-            	    pushFollow(FOLLOW_11);
-            	    lv_hashtag_4_0=ruleHashtag();
+            	    							newCompositeNode(grammarAccess.getHashtagListAccess().getHashtagHashtagParserRuleCall_3_1_1_0());
+            	    						
+            	    pushFollow(FOLLOW_10);
+            	    lv_hashtag_5_0=ruleHashtag();
 
             	    state._fsp--;
 
 
-            	    						if (current==null) {
-            	    							current = createModelElementForParent(grammarAccess.getHashtagListRule());
-            	    						}
-            	    						add(
-            	    							current,
-            	    							"hashtag",
-            	    							lv_hashtag_4_0,
-            	    							"org.xtext.geotweet.gtdsl.GTDsl.Hashtag");
-            	    						afterParserOrEnumRuleCall();
-            	    					
+            	    							if (current==null) {
+            	    								current = createModelElementForParent(grammarAccess.getHashtagListRule());
+            	    							}
+            	    							add(
+            	    								current,
+            	    								"hashtag",
+            	    								lv_hashtag_5_0,
+            	    								"org.xtext.geotweet.gtdsl.GTDsl.Hashtag");
+            	    							afterParserOrEnumRuleCall();
+            	    						
+
+            	    }
+
 
             	    }
 
@@ -747,20 +718,20 @@ public class InternalGTDslParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    if ( cnt5 >= 1 ) break loop5;
+            	    if ( cnt4 >= 1 ) break loop4;
                         EarlyExitException eee =
-                            new EarlyExitException(5, input);
+                            new EarlyExitException(4, input);
                         throw eee;
                 }
-                cnt5++;
+                cnt4++;
             } while (true);
 
 
             }
 
-            otherlv_5=(Token)match(input,19,FOLLOW_2); 
+            otherlv_6=(Token)match(input,20,FOLLOW_2); 
 
-            			newLeafNode(otherlv_5, grammarAccess.getHashtagListAccess().getRightSquareBracketKeyword_4());
+            			newLeafNode(otherlv_6, grammarAccess.getHashtagListAccess().getRightSquareBracketKeyword_4());
             		
 
             }
@@ -785,7 +756,7 @@ public class InternalGTDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleCountry"
-    // InternalGTDsl.g:316:1: entryRuleCountry returns [EObject current=null] : iv_ruleCountry= ruleCountry EOF ;
+    // InternalGTDsl.g:314:1: entryRuleCountry returns [EObject current=null] : iv_ruleCountry= ruleCountry EOF ;
     public final EObject entryRuleCountry() throws RecognitionException {
         EObject current = null;
 
@@ -793,8 +764,8 @@ public class InternalGTDslParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalGTDsl.g:316:48: (iv_ruleCountry= ruleCountry EOF )
-            // InternalGTDsl.g:317:2: iv_ruleCountry= ruleCountry EOF
+            // InternalGTDsl.g:314:48: (iv_ruleCountry= ruleCountry EOF )
+            // InternalGTDsl.g:315:2: iv_ruleCountry= ruleCountry EOF
             {
              newCompositeNode(grammarAccess.getCountryRule()); 
             pushFollow(FOLLOW_1);
@@ -821,7 +792,7 @@ public class InternalGTDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleCountry"
-    // InternalGTDsl.g:323:1: ruleCountry returns [EObject current=null] : (otherlv_0= 'country' ( (lv_name_1_0= RULE_ID ) ) ) ;
+    // InternalGTDsl.g:321:1: ruleCountry returns [EObject current=null] : (otherlv_0= 'country' ( (lv_name_1_0= RULE_ID ) ) ) ;
     public final EObject ruleCountry() throws RecognitionException {
         EObject current = null;
 
@@ -832,21 +803,21 @@ public class InternalGTDslParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalGTDsl.g:329:2: ( (otherlv_0= 'country' ( (lv_name_1_0= RULE_ID ) ) ) )
-            // InternalGTDsl.g:330:2: (otherlv_0= 'country' ( (lv_name_1_0= RULE_ID ) ) )
+            // InternalGTDsl.g:327:2: ( (otherlv_0= 'country' ( (lv_name_1_0= RULE_ID ) ) ) )
+            // InternalGTDsl.g:328:2: (otherlv_0= 'country' ( (lv_name_1_0= RULE_ID ) ) )
             {
-            // InternalGTDsl.g:330:2: (otherlv_0= 'country' ( (lv_name_1_0= RULE_ID ) ) )
-            // InternalGTDsl.g:331:3: otherlv_0= 'country' ( (lv_name_1_0= RULE_ID ) )
+            // InternalGTDsl.g:328:2: (otherlv_0= 'country' ( (lv_name_1_0= RULE_ID ) ) )
+            // InternalGTDsl.g:329:3: otherlv_0= 'country' ( (lv_name_1_0= RULE_ID ) )
             {
-            otherlv_0=(Token)match(input,20,FOLLOW_4); 
+            otherlv_0=(Token)match(input,21,FOLLOW_4); 
 
             			newLeafNode(otherlv_0, grammarAccess.getCountryAccess().getCountryKeyword_0());
             		
-            // InternalGTDsl.g:335:3: ( (lv_name_1_0= RULE_ID ) )
-            // InternalGTDsl.g:336:4: (lv_name_1_0= RULE_ID )
+            // InternalGTDsl.g:333:3: ( (lv_name_1_0= RULE_ID ) )
+            // InternalGTDsl.g:334:4: (lv_name_1_0= RULE_ID )
             {
-            // InternalGTDsl.g:336:4: (lv_name_1_0= RULE_ID )
-            // InternalGTDsl.g:337:5: lv_name_1_0= RULE_ID
+            // InternalGTDsl.g:334:4: (lv_name_1_0= RULE_ID )
+            // InternalGTDsl.g:335:5: lv_name_1_0= RULE_ID
             {
             lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_2); 
 
@@ -891,7 +862,7 @@ public class InternalGTDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleCountryList"
-    // InternalGTDsl.g:357:1: entryRuleCountryList returns [EObject current=null] : iv_ruleCountryList= ruleCountryList EOF ;
+    // InternalGTDsl.g:355:1: entryRuleCountryList returns [EObject current=null] : iv_ruleCountryList= ruleCountryList EOF ;
     public final EObject entryRuleCountryList() throws RecognitionException {
         EObject current = null;
 
@@ -899,8 +870,8 @@ public class InternalGTDslParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalGTDsl.g:357:52: (iv_ruleCountryList= ruleCountryList EOF )
-            // InternalGTDsl.g:358:2: iv_ruleCountryList= ruleCountryList EOF
+            // InternalGTDsl.g:355:52: (iv_ruleCountryList= ruleCountryList EOF )
+            // InternalGTDsl.g:356:2: iv_ruleCountryList= ruleCountryList EOF
             {
              newCompositeNode(grammarAccess.getCountryListRule()); 
             pushFollow(FOLLOW_1);
@@ -927,7 +898,7 @@ public class InternalGTDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleCountryList"
-    // InternalGTDsl.g:364:1: ruleCountryList returns [EObject current=null] : (otherlv_0= 'countries' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '[' ( ( (lv_country_3_0= ruleCountry ) ) (otherlv_4= ',' ( (lv_country_5_0= ruleCountry ) ) )* ) otherlv_6= ']' ) ;
+    // InternalGTDsl.g:362:1: ruleCountryList returns [EObject current=null] : (otherlv_0= 'countries' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '[' ( ( (lv_country_3_0= ruleCountry ) ) (otherlv_4= ',' ( (lv_country_5_0= ruleCountry ) ) )* ) otherlv_6= ']' ) ;
     public final EObject ruleCountryList() throws RecognitionException {
         EObject current = null;
 
@@ -945,23 +916,23 @@ public class InternalGTDslParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalGTDsl.g:370:2: ( (otherlv_0= 'countries' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '[' ( ( (lv_country_3_0= ruleCountry ) ) (otherlv_4= ',' ( (lv_country_5_0= ruleCountry ) ) )* ) otherlv_6= ']' ) )
-            // InternalGTDsl.g:371:2: (otherlv_0= 'countries' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '[' ( ( (lv_country_3_0= ruleCountry ) ) (otherlv_4= ',' ( (lv_country_5_0= ruleCountry ) ) )* ) otherlv_6= ']' )
+            // InternalGTDsl.g:368:2: ( (otherlv_0= 'countries' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '[' ( ( (lv_country_3_0= ruleCountry ) ) (otherlv_4= ',' ( (lv_country_5_0= ruleCountry ) ) )* ) otherlv_6= ']' ) )
+            // InternalGTDsl.g:369:2: (otherlv_0= 'countries' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '[' ( ( (lv_country_3_0= ruleCountry ) ) (otherlv_4= ',' ( (lv_country_5_0= ruleCountry ) ) )* ) otherlv_6= ']' )
             {
-            // InternalGTDsl.g:371:2: (otherlv_0= 'countries' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '[' ( ( (lv_country_3_0= ruleCountry ) ) (otherlv_4= ',' ( (lv_country_5_0= ruleCountry ) ) )* ) otherlv_6= ']' )
-            // InternalGTDsl.g:372:3: otherlv_0= 'countries' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '[' ( ( (lv_country_3_0= ruleCountry ) ) (otherlv_4= ',' ( (lv_country_5_0= ruleCountry ) ) )* ) otherlv_6= ']'
+            // InternalGTDsl.g:369:2: (otherlv_0= 'countries' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '[' ( ( (lv_country_3_0= ruleCountry ) ) (otherlv_4= ',' ( (lv_country_5_0= ruleCountry ) ) )* ) otherlv_6= ']' )
+            // InternalGTDsl.g:370:3: otherlv_0= 'countries' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '[' ( ( (lv_country_3_0= ruleCountry ) ) (otherlv_4= ',' ( (lv_country_5_0= ruleCountry ) ) )* ) otherlv_6= ']'
             {
-            otherlv_0=(Token)match(input,21,FOLLOW_4); 
+            otherlv_0=(Token)match(input,22,FOLLOW_4); 
 
             			newLeafNode(otherlv_0, grammarAccess.getCountryListAccess().getCountriesKeyword_0());
             		
-            // InternalGTDsl.g:376:3: ( (lv_name_1_0= RULE_ID ) )
-            // InternalGTDsl.g:377:4: (lv_name_1_0= RULE_ID )
+            // InternalGTDsl.g:374:3: ( (lv_name_1_0= RULE_ID ) )
+            // InternalGTDsl.g:375:4: (lv_name_1_0= RULE_ID )
             {
-            // InternalGTDsl.g:377:4: (lv_name_1_0= RULE_ID )
-            // InternalGTDsl.g:378:5: lv_name_1_0= RULE_ID
+            // InternalGTDsl.g:375:4: (lv_name_1_0= RULE_ID )
+            // InternalGTDsl.g:376:5: lv_name_1_0= RULE_ID
             {
-            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_9); 
+            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_7); 
 
             					newLeafNode(lv_name_1_0, grammarAccess.getCountryListAccess().getNameIDTerminalRuleCall_1_0());
             				
@@ -981,23 +952,23 @@ public class InternalGTDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_2=(Token)match(input,18,FOLLOW_12); 
+            otherlv_2=(Token)match(input,18,FOLLOW_11); 
 
             			newLeafNode(otherlv_2, grammarAccess.getCountryListAccess().getLeftSquareBracketKeyword_2());
             		
-            // InternalGTDsl.g:398:3: ( ( (lv_country_3_0= ruleCountry ) ) (otherlv_4= ',' ( (lv_country_5_0= ruleCountry ) ) )* )
-            // InternalGTDsl.g:399:4: ( (lv_country_3_0= ruleCountry ) ) (otherlv_4= ',' ( (lv_country_5_0= ruleCountry ) ) )*
+            // InternalGTDsl.g:396:3: ( ( (lv_country_3_0= ruleCountry ) ) (otherlv_4= ',' ( (lv_country_5_0= ruleCountry ) ) )* )
+            // InternalGTDsl.g:397:4: ( (lv_country_3_0= ruleCountry ) ) (otherlv_4= ',' ( (lv_country_5_0= ruleCountry ) ) )*
             {
-            // InternalGTDsl.g:399:4: ( (lv_country_3_0= ruleCountry ) )
-            // InternalGTDsl.g:400:5: (lv_country_3_0= ruleCountry )
+            // InternalGTDsl.g:397:4: ( (lv_country_3_0= ruleCountry ) )
+            // InternalGTDsl.g:398:5: (lv_country_3_0= ruleCountry )
             {
-            // InternalGTDsl.g:400:5: (lv_country_3_0= ruleCountry )
-            // InternalGTDsl.g:401:6: lv_country_3_0= ruleCountry
+            // InternalGTDsl.g:398:5: (lv_country_3_0= ruleCountry )
+            // InternalGTDsl.g:399:6: lv_country_3_0= ruleCountry
             {
 
             						newCompositeNode(grammarAccess.getCountryListAccess().getCountryCountryParserRuleCall_3_0_0());
             					
-            pushFollow(FOLLOW_13);
+            pushFollow(FOLLOW_10);
             lv_country_3_0=ruleCountry();
 
             state._fsp--;
@@ -1019,35 +990,35 @@ public class InternalGTDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalGTDsl.g:418:4: (otherlv_4= ',' ( (lv_country_5_0= ruleCountry ) ) )*
-            loop6:
+            // InternalGTDsl.g:416:4: (otherlv_4= ',' ( (lv_country_5_0= ruleCountry ) ) )*
+            loop5:
             do {
-                int alt6=2;
-                int LA6_0 = input.LA(1);
+                int alt5=2;
+                int LA5_0 = input.LA(1);
 
-                if ( (LA6_0==22) ) {
-                    alt6=1;
+                if ( (LA5_0==19) ) {
+                    alt5=1;
                 }
 
 
-                switch (alt6) {
+                switch (alt5) {
             	case 1 :
-            	    // InternalGTDsl.g:419:5: otherlv_4= ',' ( (lv_country_5_0= ruleCountry ) )
+            	    // InternalGTDsl.g:417:5: otherlv_4= ',' ( (lv_country_5_0= ruleCountry ) )
             	    {
-            	    otherlv_4=(Token)match(input,22,FOLLOW_12); 
+            	    otherlv_4=(Token)match(input,19,FOLLOW_11); 
 
             	    					newLeafNode(otherlv_4, grammarAccess.getCountryListAccess().getCommaKeyword_3_1_0());
             	    				
-            	    // InternalGTDsl.g:423:5: ( (lv_country_5_0= ruleCountry ) )
-            	    // InternalGTDsl.g:424:6: (lv_country_5_0= ruleCountry )
+            	    // InternalGTDsl.g:421:5: ( (lv_country_5_0= ruleCountry ) )
+            	    // InternalGTDsl.g:422:6: (lv_country_5_0= ruleCountry )
             	    {
-            	    // InternalGTDsl.g:424:6: (lv_country_5_0= ruleCountry )
-            	    // InternalGTDsl.g:425:7: lv_country_5_0= ruleCountry
+            	    // InternalGTDsl.g:422:6: (lv_country_5_0= ruleCountry )
+            	    // InternalGTDsl.g:423:7: lv_country_5_0= ruleCountry
             	    {
 
             	    							newCompositeNode(grammarAccess.getCountryListAccess().getCountryCountryParserRuleCall_3_1_1_0());
             	    						
-            	    pushFollow(FOLLOW_13);
+            	    pushFollow(FOLLOW_10);
             	    lv_country_5_0=ruleCountry();
 
             	    state._fsp--;
@@ -1074,14 +1045,14 @@ public class InternalGTDslParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    break loop6;
+            	    break loop5;
                 }
             } while (true);
 
 
             }
 
-            otherlv_6=(Token)match(input,19,FOLLOW_2); 
+            otherlv_6=(Token)match(input,20,FOLLOW_2); 
 
             			newLeafNode(otherlv_6, grammarAccess.getCountryListAccess().getRightSquareBracketKeyword_4());
             		
@@ -1113,16 +1084,14 @@ public class InternalGTDslParser extends AbstractInternalAntlrParser {
 
     public static final BitSet FOLLOW_1 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_2 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_3 = new BitSet(new long[]{0x0000000000220002L});
+    public static final BitSet FOLLOW_3 = new BitSet(new long[]{0x0000000000420002L});
     public static final BitSet FOLLOW_4 = new BitSet(new long[]{0x0000000000000010L});
     public static final BitSet FOLLOW_5 = new BitSet(new long[]{0x0000000000002000L});
     public static final BitSet FOLLOW_6 = new BitSet(new long[]{0x000000000001C000L});
-    public static final BitSet FOLLOW_7 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_8 = new BitSet(new long[]{0x0000000000000022L});
-    public static final BitSet FOLLOW_9 = new BitSet(new long[]{0x0000000000040000L});
-    public static final BitSet FOLLOW_10 = new BitSet(new long[]{0x0000000000001000L});
-    public static final BitSet FOLLOW_11 = new BitSet(new long[]{0x0000000000081000L});
-    public static final BitSet FOLLOW_12 = new BitSet(new long[]{0x0000000000100000L});
-    public static final BitSet FOLLOW_13 = new BitSet(new long[]{0x0000000000480000L});
+    public static final BitSet FOLLOW_7 = new BitSet(new long[]{0x0000000000040000L});
+    public static final BitSet FOLLOW_8 = new BitSet(new long[]{0x0000000000001000L});
+    public static final BitSet FOLLOW_9 = new BitSet(new long[]{0x0000000000080000L});
+    public static final BitSet FOLLOW_10 = new BitSet(new long[]{0x0000000000180000L});
+    public static final BitSet FOLLOW_11 = new BitSet(new long[]{0x0000000000200000L});
 
 }

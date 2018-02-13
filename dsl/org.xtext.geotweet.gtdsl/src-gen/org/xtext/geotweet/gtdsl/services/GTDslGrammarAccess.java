@@ -59,57 +59,49 @@ public class GTDslGrammarAccess extends AbstractGrammarElementFinder {
 	public class HashtagElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.geotweet.gtdsl.GTDsl.Hashtag");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Group cGroup_0 = (Group)cGroup.eContents().get(0);
-		private final Keyword cNumberSignKeyword_0_0 = (Keyword)cGroup_0.eContents().get(0);
-		private final Assignment cNameAssignment_0_1 = (Assignment)cGroup_0.eContents().get(1);
-		private final RuleCall cNameIDTerminalRuleCall_0_1_0 = (RuleCall)cNameAssignment_0_1.eContents().get(0);
-		private final Keyword cColonKeyword_0_2 = (Keyword)cGroup_0.eContents().get(2);
-		private final Assignment cColorAssignment_0_3 = (Assignment)cGroup_0.eContents().get(3);
-		private final Alternatives cColorAlternatives_0_3_0 = (Alternatives)cColorAssignment_0_3.eContents().get(0);
-		private final Keyword cColorRedKeyword_0_3_0_0 = (Keyword)cColorAlternatives_0_3_0.eContents().get(0);
-		private final Keyword cColorBlueKeyword_0_3_0_1 = (Keyword)cColorAlternatives_0_3_0.eContents().get(1);
-		private final Keyword cColorGreenKeyword_0_3_0_2 = (Keyword)cColorAlternatives_0_3_0.eContents().get(2);
-		private final RuleCall cNEWLINETerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Keyword cNumberSignKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
+		private final Keyword cColonKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Assignment cColorAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final Alternatives cColorAlternatives_3_0 = (Alternatives)cColorAssignment_3.eContents().get(0);
+		private final Keyword cColorRedKeyword_3_0_0 = (Keyword)cColorAlternatives_3_0.eContents().get(0);
+		private final Keyword cColorBlueKeyword_3_0_1 = (Keyword)cColorAlternatives_3_0.eContents().get(1);
+		private final Keyword cColorGreenKeyword_3_0_2 = (Keyword)cColorAlternatives_3_0.eContents().get(2);
 		
 		//Hashtag:
-		//	('#' name=ID ':' color=('red' | 'blue' | 'green')) NEWLINE+;
+		//	'#' name=ID ':' color=('red' | 'blue' | 'green');
 		@Override public ParserRule getRule() { return rule; }
 		
-		//('#' name=ID ':' color=('red' | 'blue' | 'green')) NEWLINE+
+		//'#' name=ID ':' color=('red' | 'blue' | 'green')
 		public Group getGroup() { return cGroup; }
 		
-		//('#' name=ID ':' color=('red' | 'blue' | 'green'))
-		public Group getGroup_0() { return cGroup_0; }
-		
 		//'#'
-		public Keyword getNumberSignKeyword_0_0() { return cNumberSignKeyword_0_0; }
+		public Keyword getNumberSignKeyword_0() { return cNumberSignKeyword_0; }
 		
 		//name=ID
-		public Assignment getNameAssignment_0_1() { return cNameAssignment_0_1; }
+		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
 		
 		//ID
-		public RuleCall getNameIDTerminalRuleCall_0_1_0() { return cNameIDTerminalRuleCall_0_1_0; }
+		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
 		
 		//':'
-		public Keyword getColonKeyword_0_2() { return cColonKeyword_0_2; }
+		public Keyword getColonKeyword_2() { return cColonKeyword_2; }
 		
 		//color=('red' | 'blue' | 'green')
-		public Assignment getColorAssignment_0_3() { return cColorAssignment_0_3; }
+		public Assignment getColorAssignment_3() { return cColorAssignment_3; }
 		
 		//('red' | 'blue' | 'green')
-		public Alternatives getColorAlternatives_0_3_0() { return cColorAlternatives_0_3_0; }
+		public Alternatives getColorAlternatives_3_0() { return cColorAlternatives_3_0; }
 		
 		//'red'
-		public Keyword getColorRedKeyword_0_3_0_0() { return cColorRedKeyword_0_3_0_0; }
+		public Keyword getColorRedKeyword_3_0_0() { return cColorRedKeyword_3_0_0; }
 		
 		//'blue'
-		public Keyword getColorBlueKeyword_0_3_0_1() { return cColorBlueKeyword_0_3_0_1; }
+		public Keyword getColorBlueKeyword_3_0_1() { return cColorBlueKeyword_3_0_1; }
 		
 		//'green'
-		public Keyword getColorGreenKeyword_0_3_0_2() { return cColorGreenKeyword_0_3_0_2; }
-		
-		//NEWLINE+
-		public RuleCall getNEWLINETerminalRuleCall_1() { return cNEWLINETerminalRuleCall_1; }
+		public Keyword getColorGreenKeyword_3_0_2() { return cColorGreenKeyword_3_0_2; }
 	}
 	public class HashtagListElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.geotweet.gtdsl.GTDsl.HashtagList");
@@ -121,15 +113,17 @@ public class GTDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
 		private final Assignment cHashtagAssignment_3_0 = (Assignment)cGroup_3.eContents().get(0);
 		private final RuleCall cHashtagHashtagParserRuleCall_3_0_0 = (RuleCall)cHashtagAssignment_3_0.eContents().get(0);
-		private final Assignment cHashtagAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
-		private final RuleCall cHashtagHashtagParserRuleCall_3_1_0 = (RuleCall)cHashtagAssignment_3_1.eContents().get(0);
+		private final Group cGroup_3_1 = (Group)cGroup_3.eContents().get(1);
+		private final Keyword cCommaKeyword_3_1_0 = (Keyword)cGroup_3_1.eContents().get(0);
+		private final Assignment cHashtagAssignment_3_1_1 = (Assignment)cGroup_3_1.eContents().get(1);
+		private final RuleCall cHashtagHashtagParserRuleCall_3_1_1_0 = (RuleCall)cHashtagAssignment_3_1_1.eContents().get(0);
 		private final Keyword cRightSquareBracketKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		
 		//HashtagList:
-		//	'tags' name=ID '[' (hashtag+=Hashtag hashtag+=Hashtag+) ']';
+		//	'tags' name=ID '[' (hashtag+=Hashtag ("," hashtag+=Hashtag)+) ']';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'tags' name=ID '[' (hashtag+=Hashtag hashtag+=Hashtag+) ']'
+		//'tags' name=ID '[' (hashtag+=Hashtag ("," hashtag+=Hashtag)+) ']'
 		public Group getGroup() { return cGroup; }
 		
 		//'tags'
@@ -144,7 +138,7 @@ public class GTDslGrammarAccess extends AbstractGrammarElementFinder {
 		//'['
 		public Keyword getLeftSquareBracketKeyword_2() { return cLeftSquareBracketKeyword_2; }
 		
-		//(hashtag+=Hashtag hashtag+=Hashtag+)
+		//(hashtag+=Hashtag ("," hashtag+=Hashtag)+)
 		public Group getGroup_3() { return cGroup_3; }
 		
 		//hashtag+=Hashtag
@@ -153,11 +147,17 @@ public class GTDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Hashtag
 		public RuleCall getHashtagHashtagParserRuleCall_3_0_0() { return cHashtagHashtagParserRuleCall_3_0_0; }
 		
-		//hashtag+=Hashtag+
-		public Assignment getHashtagAssignment_3_1() { return cHashtagAssignment_3_1; }
+		//("," hashtag+=Hashtag)+
+		public Group getGroup_3_1() { return cGroup_3_1; }
+		
+		//","
+		public Keyword getCommaKeyword_3_1_0() { return cCommaKeyword_3_1_0; }
+		
+		//hashtag+=Hashtag
+		public Assignment getHashtagAssignment_3_1_1() { return cHashtagAssignment_3_1_1; }
 		
 		//Hashtag
-		public RuleCall getHashtagHashtagParserRuleCall_3_1_0() { return cHashtagHashtagParserRuleCall_3_1_0; }
+		public RuleCall getHashtagHashtagParserRuleCall_3_1_1_0() { return cHashtagHashtagParserRuleCall_3_1_1_0; }
 		
 		//']'
 		public Keyword getRightSquareBracketKeyword_4() { return cRightSquareBracketKeyword_4; }
@@ -320,7 +320,7 @@ public class GTDslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//Hashtag:
-	//	('#' name=ID ':' color=('red' | 'blue' | 'green')) NEWLINE+;
+	//	'#' name=ID ':' color=('red' | 'blue' | 'green');
 	public HashtagElements getHashtagAccess() {
 		return pHashtag;
 	}
@@ -330,7 +330,7 @@ public class GTDslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//HashtagList:
-	//	'tags' name=ID '[' (hashtag+=Hashtag hashtag+=Hashtag+) ']';
+	//	'tags' name=ID '[' (hashtag+=Hashtag ("," hashtag+=Hashtag)+) ']';
 	public HashtagListElements getHashtagListAccess() {
 		return pHashtagList;
 	}
@@ -378,7 +378,8 @@ public class GTDslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//terminal STRING:
-	//	'"' ('\\' . | !('\\' | '"'))* '"' | "'" ('\\' . | !('\\' | "'"))* "'";
+	//	'"' ('\\' . | !('\\' | '"'))* '"' |
+	//	"'" ('\\' . | !('\\' | "'"))* "'";
 	public TerminalRule getSTRINGRule() {
 		return gaTerminals.getSTRINGRule();
 	}
