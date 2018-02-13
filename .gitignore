@@ -5,3 +5,7 @@ dsl/org.xtext.geotweet.gtdsl.ui/xtend-gen/
 dsl/org.xtext.geotweet.gtdsl/bin/
 dsl/org.xtext.geotweet.gtdsl/src-gen/
 dsl/org.xtext.geotweet.gtdsl/xtend-gen/
+dsl/.metadata/
+dsl/org.xtext.geotweet.gtdsl.ui/src-gen/
+runtime-EclipseApplication/.metadata/
+
