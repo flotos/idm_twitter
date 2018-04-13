@@ -10,6 +10,8 @@ import org.eclipse.xtext.generator.IGeneratorContext
 import org.eclipse.xtext.naming.IQualifiedNameProvider
  
 import com.google.inject.Inject
+import org.xtext.geotweet.gtdsl.gTDsl.Query
+
 /**
  * Generates code from your model files on save.
  * 
@@ -20,11 +22,17 @@ class GTDslGenerator extends AbstractGenerator {
     @Inject extension IQualifiedNameProvider
     
 	override void doGenerate(Resource resource, IFileSystemAccess2 fsa, IGeneratorContext context) {
-        for (e : resource.allContents.toIterable.filter(Entity)) {
+        for (e : resource.allContents.toIterable.filter(Query)) {
             fsa.generateFile(
-                e.fullyQualifiedName.toString("/") + ".java",
+                "config.py",
                 e.compile
             )
         }
+	}
+	
+	def String compile(Query query){
+		var String hashTagList = "hashtags = "+query.hashtags.hashtag.map[tag | "{'name': " + tag.name + ", 'color':" + tag.color + "}"];
+		var String countryList = "country_list = "+ query.countries.country.map[name];
+		return hashTagList + "\n" + countryList
 	}
 }

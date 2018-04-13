@@ -9,10 +9,8 @@ pip install flask flask_api
 ```
 
 ## Valid DSL query
-tags presidents [ #trump:green, #hillary:green ]
-tags hockeyTeams [ #sharks:blue, #otter:red ]
+tags presidents [ #trump:green, #hillary:red ]
 
-countries northAmerica [ country USA, country test ]
+countries northAmerica [ country USA, country France ]
 
 map USElection displays presidents in northAmerica
-map hockeyTrend displays hockeyTeams in northAmerica
