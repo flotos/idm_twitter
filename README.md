@@ -2,11 +2,15 @@
 
 ## Description
 
-## Valid DSL query
-tags presidents [ #trump:green, #hillary:green ]
-tags hockeyTeams [ #sharks:blue, #otter:red ]
+## Setup
+In `/RestServer` do the following command :
+```
+pip install flask flask_api
+```
 
-countries northAmerica [ country USA, country test ]
+## Valid DSL query
+tags presidents [ #trump:green, #hillary:red ]
+
+countries northAmerica [ country USA, country France ]
 
 map USElection displays presidents in northAmerica
-map hockeyTrend displays hockeyTeams in northAmerica

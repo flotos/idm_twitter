@@ -8,6 +8,7 @@
       fileExtensions="gtdsl" ecorePackage="GTDsl.ecore#/">
     <genClasses ecoreClass="GTDsl.ecore#//Model">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GTDsl.ecore#//Model/elements"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GTDsl.ecore#//Model/query"/>
     </genClasses>
     <genClasses ecoreClass="GTDsl.ecore#//Type">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GTDsl.ecore#//Type/name"/>
@@ -26,6 +27,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GTDsl.ecore#//CountryList/country"/>
     </genClasses>
     <genClasses ecoreClass="GTDsl.ecore#//Query">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GTDsl.ecore#//Query/name"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference GTDsl.ecore#//Query/hashtags"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference GTDsl.ecore#//Query/countries"/>
     </genClasses>

@@ -4,6 +4,8 @@
   <eClassifiers xsi:type="ecore:EClass" name="Model">
     <eStructuralFeatures xsi:type="ecore:EReference" name="elements" upperBound="-1"
         eType="#//Type" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="query" eType="#//Query"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Type">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -23,7 +25,8 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="country" upperBound="-1"
         eType="#//Country" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Query" eSuperTypes="#//Type">
+  <eClassifiers xsi:type="ecore:EClass" name="Query">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="hashtags" eType="#//HashtagList"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="countries" eType="#//CountryList"/>
   </eClassifiers>

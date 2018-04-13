@@ -3,10 +3,10 @@ grammar org.xtext.geotweet.gtdsl.GTDsl with org.eclipse.xtext.common.Terminals
 generate gTDsl "http://www.xtext.org/geotweet/gtdsl/GTDsl"
 
 Model:
-	 (elements+=Type)*;
+	 (elements+=Type)* query=Query;
 	
 Type:
-    HashtagList | CountryList | Query;
+    HashtagList | CountryList;
 
 Hashtag:
 	('#' name=ID ':' color=('red' | 'blue' | 'green' | 'yellow'));
@@ -15,7 +15,7 @@ HashtagList:
 	'tags' name=ID '[' (hashtag+=Hashtag ("," hashtag+=Hashtag)+) ']';
 
 Country:
-	'country' name=ID;
+	name=ID;
 	
 CountryList:
 	'countries' name=ID '[' (country+=Country ("," country+=Country)*) ']';
