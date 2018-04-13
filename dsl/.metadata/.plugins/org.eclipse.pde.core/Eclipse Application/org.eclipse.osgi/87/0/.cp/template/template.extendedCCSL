@@ -1,0 +1,15 @@
+/*
+ * CCSL specification
+ * @author:  %author%
+ * date :  %date%
+ */
+ClockConstraintSystem %rootname% {
+    imports {
+       %import%
+    }
+    entryBlock main
+     
+        Block main {
+		
+	}
+}

@@ -13,9 +13,7 @@ Require-Bundle: org.eclipse.xtext,
  org.antlr.runtime,
  org.eclipse.xtext.util,
  org.eclipse.xtend.lib,
- org.eclipse.emf.common,
- org.eclipse.xtext.common.types,
- org.objectweb.asm;bundle-version="[5.0.1,6.0.0)";resolution:=optional
+ org.eclipse.emf.common
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Export-Package: org.xtext.geotweet.gtdsl,
  org.xtext.geotweet.gtdsl.gTDsl.impl,
@@ -27,6 +25,5 @@ Export-Package: org.xtext.geotweet.gtdsl,
  org.xtext.geotweet.gtdsl.parser.antlr.internal,
  org.xtext.geotweet.gtdsl.gTDsl,
  org.xtext.geotweet.gtdsl.services,
- org.xtext.geotweet.gtdsl.validation,
- org.xtext.geotweet.gtdsl.jvmmodel
+ org.xtext.geotweet.gtdsl.validation
 Import-Package: org.apache.log4j

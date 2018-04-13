@@ -1,0 +1,44 @@
+
+a#frinriaaostetimesquarewizard-introLink img { background-image : url(graphics/sample.gif); }
+a#frinriaaostetimesquarewizard-introLink:hover img { background-image : url(graphics/sample_hov.gif); }
+a#frinriaaostetimesquarewizard-introLink2 img { background-image : url(graphics/demo.gif);  width: 16 ; height:48}
+a#frinriaaostetimesquarewizard-introLink2:hover img { background-image : url(graphics/demo.gif); width: 16; height:48}
+
+
+div#file-news {
+	position: relative;	
+	margin-left: 52px;	
+	height:16 px;
+}
+
+#file-news .div-label {
+	font-size: 9pt;
+}
+
+#file-news .provided-content {
+}
+
+#file-news .status-text {
+	font-weight: normal;
+	color: #909090;
+	font-size: 8pt;
+}
+
+
+#frinriaaostetimesquarewizard-introLink2.status-text {
+	font-weight: normal;
+	color: #909090;
+	font-size: 8pt;
+	height:16 px;
+	bottom : -32px;
+}
+
+#frinriaaostetimesquarewizard-introLink2 {
+	list-style-type: none;	
+	left: 40px;	
+	height:16 px;
+	bottom : -32px;
+}
+
+
+

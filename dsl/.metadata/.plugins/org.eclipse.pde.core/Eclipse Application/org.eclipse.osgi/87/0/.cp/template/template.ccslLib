@@ -1,0 +1,18 @@
+/* CCSL Library 
+ *
+ *@author:  %author%
+ * date :  %date%
+ */
+Library %rootname% {
+	imports {
+		%import%
+	}
+	
+}
+	
+	
+	
+	
+	
+	
+	
