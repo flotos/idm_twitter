@@ -1,0 +1,10 @@
+/*
+ * CCSL Priority specification
+ * @author:  %author%
+ * date :  %date%
+ */
+
+PrioritySpecification {
+%import%
+	
+}
