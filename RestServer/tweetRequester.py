@@ -18,6 +18,7 @@ def getNbLikes(request):
 
 def getLatLngFromCountryName(country):
 	latLng = set()
+	# Getting the file with countries name and latitude and longitude associated with them
 	with open('../Localisation/dataGeoTweet.json', encoding='utf-8') as file:
 		dataGeoTweet = json.load(file)
 	if country not in dataGeoTweet:
@@ -43,7 +44,7 @@ def getRequest(arg):
 				request = "q=geocode%3A"+str(arg[0][0])+"%2C"+str(arg[0][1])+"%2C"+"%23"+hashtag
 			else:
 				latLng = getLatLngFromCountryName(arg[0])
-				request = "q=geocode%3A"+str(latLng[0])+"%2C"+str(latLng[1])+"%2C"+arg[1]+"%2C"+"%23"+hashtag
+				request = "q=geocode%3A"+str(latLng[0])+"%2C"+str(latLng[1])+"%2C"+"%23"+hashtag
 		elif len(arg) == 3: # A location, radius and the Hashtag
 			if isinstance(arg[0], tuple):
 				request = "q=geocode%3A"+str(arg[0][0])+"%2C"+str(arg[0][1])+"%2C"+arg[1]+"%2C"+"%23"+hashtag
@@ -78,12 +79,28 @@ def getTweets(arg1, arg2):
 	ponderation1 = 1 * favorite_count1 + 1 * retweet_count1
 	ponderation2 = 1 * favorite_count2 + 1 * retweet_count2
 
-	hashtag1 = arg1[-1] if arg1[-1][0] == '#' else '#' + arg1[-1]
-	hashtag2 = arg2[-1] if arg2[-1][0] == '#' else '#' + arg2[-1]
+	#print(ponderation1)
+	#print(ponderation2)
 
-	if ponderation1 > ponderation2:
-		return hashtag1
-	else:
-		return hashtag2
+	hashtag1 = arg1[-1] if arg1[-1][0] == '#' else '#' + arg1[-1]
+	hashtag2 = arg2[-1] if arg2[-1][0] == '#' else '#' + arg2[-1]	
+
+	if ponderation1 + ponderation2 == 0:
+		return ponderation2
+	return ponderation2 / (ponderation1 + ponderation2)
+
+def getHashtagFromLists(hashtagList, countriesList):
+	listeRatio = {}
+	listeRatio[(hashtagList[0], hashtagList[1])] = {}
+	for country in countriesList:
+		request1 = (country, "5000km",hashtagList[0])
+		request2 = (country, "5000km", hashtagList[1])
+		ratio = getTweets(request1, request2)
+		listeRatio[(hashtagList[0], hashtagList[1])][country] = ratio
+	return listeRatio
+
+
+#print(getHashtagFromLists(['#LoveTwitter', '#LoveWhereYouLive'], ["France", "United States"]))	
+		
 
 
