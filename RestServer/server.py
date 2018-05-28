@@ -19,7 +19,7 @@ def getTweetsRatio():
 
     ratios = list(map(lambda country: [country, tweets_ratio[(tagWithoutColor[0], tagWithoutColor[1])][country]], country_list))
 
-    return ratios, status.HTTP_200_OK
+    return {'hashtags': hashtags,'ratios':ratios}, status.HTTP_200_OK
 
 if __name__ == "__main__":
     app.run(debug=True)
