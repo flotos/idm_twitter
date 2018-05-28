@@ -22,7 +22,7 @@ def getLatLngFromCountryName(country):
 	with open('../Localisation/dataGeoTweet.json', encoding='utf-8') as file:
 		dataGeoTweet = json.load(file)
 	if country not in dataGeoTweet:
-		raise ValueError("Le pays '{}' n'existe pas dans la base de données.".format(country))
+		raise ValueError("The country '{}' does not exist in the database.".format(country))
 	lat = dataGeoTweet[country]['lat']
 	lng = dataGeoTweet[country]['lng']
 	latLng = (lat, lng)
