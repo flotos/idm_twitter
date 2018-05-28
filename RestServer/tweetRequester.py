@@ -59,10 +59,10 @@ def getRequest(arg):
 
 #  Print the numbers of like and retweet on 15 tweets each for two hashtag in a certain location
 def getTweets(arg1, arg2):
-	api = twitter.Api(consumer_key="8L86JGKczb0FWo2LoaO6WYe19",
-		          consumer_secret="cyZw4UZ552mN4OCcx6cwJpjmyNfmHuAL9qRzkwN3sV4koow8fX",
-		          access_token_key="2923216455-wcFTIP7xSj8MGN5kVXsgQnmCj4gEeCDps9qok8T",
-		          access_token_secret="T9RF8LeJOIHX2cjo4Y2y2i2le4KOff3t8y5UQ9gl9Gtp9")
+	api = twitter.Api(consumer_key="",
+		          consumer_secret="",
+		          access_token_key="",
+		          access_token_secret="")
 
 	request1 = getRequest(arg1)
 	request2 = getRequest(arg2)
