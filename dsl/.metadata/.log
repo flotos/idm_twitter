@@ -458,3 +458,54 @@ Contains: Error reading manifest for C:\Users\Jehan Poublan\Downloads\gemoc_stud
 !MESSAGE Problems occurred getting the plug-ins in this container
 !SUBENTRY 2 org.eclipse.pde.core 4 204 2018-04-13 14:59:23.318
 !MESSAGE Error reading manifest for C:\Users\Jehan Poublan\Downloads\gemoc_studio-win32.win32.x86_64\gemoc_studio_v2.3.1_win32.x86_64\plugins\org.gemoc.gemoc_studio.branding_2.3.0.201702271754.jar
+!SESSION 2018-05-28 10:07:58.444 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_144
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_GB
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.equinox.app 0 0 2018-05-28 10:08:00.176
+!MESSAGE Product org.gemoc.gemoc_studio.branding.gemoc_studio could not be found.
+
+!ENTRY org.eclipse.core.resources 2 10035 2018-05-28 10:08:07.365
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.equinox.ds 1 0 2018-05-28 10:08:08.957
+!MESSAGE Could not bind a reference of component org.eclipse.fx.core.internal.JUtilLoggerFactory. The reference is: Reference[name = registerHandler, interface = java.util.logging.Handler, policy = dynamic, policy-option = greedy, cardinality = 0..n, target = null, bind = registerHandler, unbind = unregisterHandler, updated = null]
+
+!ENTRY org.eclipse.pde.core 4 0 2018-05-28 10:08:10.009
+!MESSAGE The current target platform contains errors, open Window > Preferences > Plug-in Development > Target Platform for details.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Problems occurred getting the plug-ins in this container
+	at org.eclipse.pde.internal.core.PluginModelManager.getExternalBundles(PluginModelManager.java:637)
+	at org.eclipse.pde.internal.core.PluginModelManager.initializeTable(PluginModelManager.java:543)
+	at org.eclipse.pde.internal.core.PluginModelManager.targetReloaded(PluginModelManager.java:471)
+	at org.eclipse.pde.internal.core.RequiredPluginsInitializer$1.run(RequiredPluginsInitializer.java:31)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Contains: Error reading manifest for /home/flotos/programs/gemoc_studio_v2.3.1_linux.gtk.x86_64/plugins/org.gemoc.gemoc_studio.branding_2.3.0.201702271754.jar
+!SUBENTRY 1 org.eclipse.pde.core 4 0 2018-05-28 10:08:10.018
+!MESSAGE Problems occurred getting the plug-ins in this container
+!SUBENTRY 2 org.eclipse.pde.core 4 204 2018-05-28 10:08:10.018
+!MESSAGE Error reading manifest for /home/flotos/programs/gemoc_studio_v2.3.1_linux.gtk.x86_64/plugins/org.gemoc.gemoc_studio.branding_2.3.0.201702271754.jar
+
+!ENTRY org.eclipse.jface 2 0 2018-05-28 10:08:10.736
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2018-05-28 10:08:10.736
+!MESSAGE A conflict occurred for ALT+CTRL+U:
+Binding(ALT+CTRL+U,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.search.occurrences.in.file.quickMenu,Show Occurrences in File Quick Menu,
+		Shows the Occurrences in File quick menu,
+		Category(org.eclipse.search.ui.category.search,Search,Search command category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1a7f2d34,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,gtk,system)
+Binding(ALT+CTRL+U,
+	ParameterizedCommand(Command(org.eclipse.team.svn.ui.command.UpdateCommand,Update,
+		,
+		Category(org.eclipse.team.svn.ui.command.category,SVN,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@23243bc0,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
