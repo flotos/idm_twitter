@@ -31,8 +31,8 @@ class GTDslGenerator extends AbstractGenerator {
 	}
 	
 	def String compile(Query query){
-		var String hashTagList = "hashtags = "+query.hashtags.hashtag.map[tag | "{'name': " + tag.name + ", 'color':" + tag.color + "}"];
-		var String countryList = "country_list = "+ query.countries.country.map[name];
+		var String hashTagList = "hashtags = "+query.hashtags.hashtag.map[tag | "{'name': '" + tag.name + "', 'color': '" + tag.color + "'}"];
+		var String countryList = "country_list = "+ query.countries.country.map[ctr | "'" + ctr.name + "'"];
 		return hashTagList + "\n" + countryList
 	}
 }
