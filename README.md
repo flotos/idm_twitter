@@ -14,6 +14,17 @@ To access the Twitter API, you need to install Python-twitter and Requests
     
     pip install requests
 
+Add your twitter credentials on the python file tweetRequester, line 62
+```
+# Fake credentials
+api = twitter.Api(consumer_key="3hBKSSsJLFSD5ARJfqc9oD0hM",
+		          consumer_secret="NfSSZg5kDZL6y1V5MzA5SDMG71rtlWYqWOaE9h20uyNXnEnx4u",
+		          access_token_key="393464607-Ckr8UKHNGxXIurAQS8P4DiXAV8J7OBj3ocjWbDL9",
+		          access_token_secret="WKB4LVRMZSnpsdQ12kinscXD2zYeOX22XGK6UGt1ulNK4")
+
+```
+And then run the flask server : `python3 RestServer/server.py`
+
 
 ## Valid DSL query
 tags presidents [ #trump:green, #hillary:red ]
