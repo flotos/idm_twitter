@@ -1,10 +1,12 @@
 from flask import request, url_for
 from flask_api import FlaskAPI, status, exceptions
+from flask_cors import CORS
 
 from tweetRequester import getHashtagFromLists
 from config import hashtags, country_list
 
 app = FlaskAPI(__name__)
+CORS(app)
 
 @app.route("/tweetsRatio", methods=['GET'])
 def getTweetsRatio():

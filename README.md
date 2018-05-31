@@ -5,7 +5,7 @@
 ## Setup
 In `/RestServer` do the following command :
 ```
-pip install flask flask_api
+pip install flask flask_api flask_cors
 ```
 
 To access the Twitter API, you need to install Python-twitter and Requests

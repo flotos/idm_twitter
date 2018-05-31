@@ -1,27 +1,46 @@
+const FETCH_DELAY = 11000; // Twitter limit is every 5 seconds, and we need two request
+const FETCH_URL = 'http://localhost:5000/tweetsRatio';
+const FETCH_OPTIONS = { header: {'Access-Control-Allow-Origin':'*'}};
+
+const fetchData = () => {
+  fetch(FETCH_URL, FETCH_OPTIONS)
+    .then(function(response) {
+      return response.json();
+    })
+    .then(function(myJson) {
+      drawRegionsMap(myJson);
+    });
+};
+
+const ApiIntervalFetcher = () => {
+  fetchData();
+  setInterval(fetchData, FETCH_DELAY);
+};
+
+const drawRegionsMap = (tagsData) => {
+
+  const tagsListDisplay = document.getElementById('hashtags');
+  tagsListDisplay.textContent = `Countries near 0 have the hashtag #${tagsData.hashtags[0].name} more famous while it is #${tagsData.hashtags[1].name} in the countries near 0`; // dont use innerHtml for security reason
+
+  const data = google.visualization.arrayToDataTable([
+    ['Country', 'Popularity'],
+    ...tagsData.ratios
+    ]
+  );
+
+  const tagsColors = tagsData.hashtags.map(tag => tag.color);
+  const options = {
+    colorAxis: {minValue: 0, maxValue: 1, colors: [tagsColors[0] , 'white' , tagsColors[1]]},
+    backgroundColor: '#81d4fa',
+    datalessRegionColor: '#b3b3b3'
+  };
+
+  const chart = new google.visualization.GeoChart(document.getElementById('regions_div'));
+  chart.draw(data, options);
+};
+
 google.charts.load('current', {
   'packages':['geochart'],
   'mapsApiKey': '	AIzaSyC0l6grkS_DX5RAY17ljAaE_-Gj76I1qdk'
 });
-google.charts.setOnLoadCallback(drawRegionsMap);
-
-function drawRegionsMap() {
-  var data = google.visualization.arrayToDataTable([
-    ['Country', 'Popularity'],
-    ['Germany', 0],
-    ['United States', 0.3],
-    ['Brazil', 0.4],
-    ['Canada', 0.5],
-    ['France', 0.6],
-    ['RU', 0.9]
-  ]);
-
-  var options = {
-    colorAxis: {minValue: 0, maxValue: 1, colors: ['#00B231' , 'white' , '#FF0003']},
-    backgroundColor: '#81d4fa',
-    datalessRegionColor: '#D9D9D9'
-  };
-
-  var chart = new google.visualization.GeoChart(document.getElementById('regions_div'));
-
-  chart.draw(data, options);
-}
+google.charts.setOnLoadCallback(ApiIntervalFetcher);
