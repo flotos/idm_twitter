@@ -14,3 +14,8 @@ try:
     import flask_api
 except:
     pip.main(['install', 'flask_api'])
+
+try:
+    import flask_cors
+except:
+    pip.main(['install', 'flask_cors'])
