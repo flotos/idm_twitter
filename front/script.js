@@ -1,7 +1,5 @@
 google.charts.load('current', {
   'packages':['geochart'],
-  // Note: you will need to get a mapsApiKey for your project.
-  // See: https://developers.google.com/chart/interactive/docs/basic_load_libs#load-settings
   'mapsApiKey': '	AIzaSyC0l6grkS_DX5RAY17ljAaE_-Gj76I1qdk'
 });
 google.charts.setOnLoadCallback(drawRegionsMap);
