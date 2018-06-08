@@ -9,4 +9,10 @@
 /dsl/org.xtext.geotweet.gtdsl.ui/src-gen/
 /runtime-EclipseApplication/
 .idea/
+.vscode/
+/RestServer/bin/
+/RestServer/src/
+/RestServer/src-gen/
+/RestServer/.directory/
+/RestServer/.project/
 RestServer/__pycache__/
