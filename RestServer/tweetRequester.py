@@ -65,10 +65,10 @@ def getRequest(arg):
 def getTweets(arg1, arg2):
 	with open("credentials.txt", "r") as credFile:
 		creds = cred.readlines()
-	consumerKey = creds[0]
-	consumerSecret = creds[1]
-	accessTokenKey = creds[2]
-	accessTokenSecret = creds[3]
+	consumerKey = creds[0].rstrip()
+	consumerSecret = creds[1].rstrip()
+	accessTokenKey = creds[2].rstrip()
+	accessTokenSecret = creds[3].rstrip()
 	api = twitter.Api(consumer_key=consumerKey,
 		          consumer_secret=consumerSecret,
 		          access_token_key=accessTokenKey,
