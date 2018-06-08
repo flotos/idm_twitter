@@ -20,7 +20,7 @@ const ApiIntervalFetcher = () => {
 const drawRegionsMap = (tagsData) => {
 
   const tagsListDisplay = document.getElementById('hashtags');
-  tagsListDisplay.textContent = `Countries near 0 have the hashtag #${tagsData.hashtags[0].name} more famous while it is #${tagsData.hashtags[1].name} in the countries near 0`; // dont use innerHtml for security reason
+  tagsListDisplay.textContent = `Countries near 0 have the hashtag #${tagsData.hashtags[0].name} more famous while it is #${tagsData.hashtags[1].name} in the countries near 1`; // dont use innerHtml for security reason
 
   const data = google.visualization.arrayToDataTable([
     ['Country', 'Popularity'],

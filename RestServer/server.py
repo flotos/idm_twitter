@@ -10,13 +10,7 @@ CORS(app)
 
 @app.route("/tweetsRatio", methods=['GET'])
 def getTweetsRatio():
-
-    #if tweet list is empty:
-    #   return {}, status.HTTP_204_NO_CONTENT
-
     tagWithoutColor = list(map(lambda tag: tag.get('name'), hashtags))
-    print(tagWithoutColor)
-    #tweets_ratio = getHashtagFromLists(['#LoveTwitter', '#LoveWhereYouLive'], ["France", "United States"])
     tweets_ratio = getHashtagFromLists(tagWithoutColor, country_list)
 
     ratios = list(map(lambda country: [country, tweets_ratio[(tagWithoutColor[0], tagWithoutColor[1])][country]], country_list))
