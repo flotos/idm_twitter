@@ -64,7 +64,7 @@ def getRequest(arg):
 #  Print the numbers of like and retweet on 15 tweets each for two hashtag in a certain location
 def getTweets(arg1, arg2):
 	with open("credentials.txt", "r") as credFile:
-		creds = cred.readlines()
+		creds = credFile.readlines()
 	consumerKey = creds[0].rstrip()
 	consumerSecret = creds[1].rstrip()
 	accessTokenKey = creds[2].rstrip()
