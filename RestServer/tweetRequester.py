@@ -19,8 +19,12 @@ def getNbLikes(request):
 def getLatLngFromCountryName(country):
 	latLng = set()
 	# Getting the file with countries name and latitude and longitude associated with them
-	with open('../Localisation/dataGeoTweet.json', encoding='utf-8') as file:
-		dataGeoTweet = json.load(file)
+	try:
+		with open('./Localisation/dataGeoTweet.json', encoding='utf-8') as file:
+			dataGeoTweet = json.load(file)
+	except:
+		with open('../Localisation/dataGeoTweet.json', encoding='utf-8') as file:
+			dataGeoTweet = json.load(file)
 	if country not in dataGeoTweet:
 		raise ValueError("The country '{}' does not exist in the database.".format(country))
 	lat = dataGeoTweet[country]['lat']
